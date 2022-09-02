@@ -1,9 +1,11 @@
-import ResponsiveDrawer from "../components/Drawer";
+import Appbar from "../components/Appbar";
+import LeftAppBar from "../components/LeftBar";
 
 export default function Home() {
   return (
     <div>
-      <ResponsiveDrawer />
+      <Appbar />
+      <LeftAppBar />
     </div>
   );
 }
