@@ -1,3 +1,9 @@
+import ResponsiveDrawer from "../components/Drawer";
+
 export default function Home() {
-  return <div>Home page</div>;
+  return (
+    <div>
+      <ResponsiveDrawer />
+    </div>
+  );
 }
