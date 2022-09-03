@@ -86,7 +86,15 @@ export default function LeftAppBar() {
   };
 
   return (
-    <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+    <Box
+      sx={{
+        width: "100%",
+        maxWidth: 250,
+        minWidth: 250,
+        position: "fixed",
+        bgcolor: "background.paper",
+      }}
+    >
       <List>
         {navIcons.map((item, index) => (
           <ListItem key={index} disablePadding>
