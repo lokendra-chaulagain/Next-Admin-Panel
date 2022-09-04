@@ -22,6 +22,7 @@ export default function Category() {
             marginLeft: "-100px",
           }}
         >
+          <h1>Category</h1>
           <CategoryTable />
         </Grid>
       </Grid>

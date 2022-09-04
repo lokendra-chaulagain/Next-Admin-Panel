@@ -23,6 +23,7 @@ export default function Home() {
             marginLeft: "-100px",
           }}
         >
+          <h1>Dashboard</h1>
           <DashboardCard1 />
           <DashboardCardRow2 />
         </Grid>

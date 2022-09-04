@@ -1,9 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-
 import Divider from "@mui/material/Divider";
-import InboxIcon from "@mui/icons-material/Inbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
@@ -22,43 +19,52 @@ import StarBorder from "@mui/icons-material/StarBorder";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import Link from "next/link";
 
-const navIcons = [
+const navItems = [
   {
     icon: <GridViewIcon />,
     label: "Dashboard",
+    route: "/",
   },
   {
     icon: <ShoppingBagOutlinedIcon />,
     label: "Products",
+    route: "/product",
   },
   {
     icon: <FormatListBulletedOutlinedIcon />,
     label: "Category",
+    route: "/category",
   },
   {
     icon: <PeopleAltOutlinedIcon />,
     label: "Customers",
+    route: "/customer",
   },
 
   {
     icon: <FactCheckOutlinedIcon />,
     label: "Orders",
+    route: "/order",
   },
 
   {
     icon: <CardGiftcardOutlinedIcon />,
     label: "Coupons",
+    route: "/coupon",
   },
 
   {
     icon: <Person3OutlinedIcon />,
     label: "Our Staff",
+    route: "/ourStaff",
   },
 
   {
     icon: <SettingsOutlinedIcon />,
     label: "Setting",
+    route: "/setting",
   },
 ];
 
@@ -96,15 +102,17 @@ export default function LeftAppBar() {
       }}
     >
       <List>
-        {navIcons.map((item, index) => (
+        {navItems.map((item, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton
-              selected={selectedIndex === index}
-              onClick={(event) => handleListItemClick(event, index)}
-            >
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.label} />
-            </ListItemButton>
+            <Link href={item.route}>
+              <ListItemButton
+                selected={selectedIndex === index}
+                onClick={(event) => handleListItemClick(event, index)}
+              >
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.label} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
 

@@ -14,6 +14,7 @@ export default function OurStaff() {
           <LeftAppBar />
         </Grid>
         <Grid container item md={8}>
+          <h1>Our staff</h1>
           <OurStaffTable />
         </Grid>
       </Grid>

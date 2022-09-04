@@ -22,6 +22,7 @@ export default function Order() {
             marginLeft: "-100px",
           }}
         >
+          <h1>Order</h1>
           <OrderTable />
         </Grid>
       </Grid>

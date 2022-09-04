@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import CouponTable from "../components/CouponTable";
 
-export default function Category() {
+export default function Coupon() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Appbar />
@@ -22,6 +22,7 @@ export default function Category() {
             marginLeft: "-100px",
           }}
         >
+          <h1>Coupon</h1>
           <CouponTable />
         </Grid>
       </Grid>

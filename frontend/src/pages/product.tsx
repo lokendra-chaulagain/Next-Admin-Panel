@@ -3,6 +3,7 @@ import LeftAppBar from "../components/LeftBar";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import ProductTable from "../components/ProductTable";
+import ProductEditDrawer from "../components/ProductEditDwawer";
 
 export default function Product() {
   return (
@@ -22,7 +23,9 @@ export default function Product() {
             marginLeft: "-100px",
           }}
         >
+          <h1>Product</h1>
           <ProductTable />
+          <ProductEditDrawer />
         </Grid>
       </Grid>
     </Box>

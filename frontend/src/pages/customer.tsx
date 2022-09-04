@@ -22,6 +22,7 @@ export default function Customer() {
             marginLeft: "-100px",
           }}
         >
+          <h1>Customer</h1>
           <CustomerTable />
         </Grid>
       </Grid>
