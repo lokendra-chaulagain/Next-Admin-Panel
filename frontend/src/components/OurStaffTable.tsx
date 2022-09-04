@@ -1,6 +1,7 @@
 import * as React from "react";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import OurStaffTableActionIcons from "./OurStaffTableActionIcons";
+import styles from "../../styles/OurStaff.module.css";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -81,7 +82,10 @@ const rows = [
 
 export default function OurStaffTable() {
   return (
-    <div style={{ height: 400, width: "100%" }}>
+    <div
+      className={`${styles.ourStaffTable}`}
+      style={{ height: 500, width: "120%", marginLeft: "-100px" }}
+    >
       <DataGrid
         rows={rows}
         columns={columns}

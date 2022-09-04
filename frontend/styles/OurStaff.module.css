@@ -1,0 +1,19 @@
+.ourStaffTable {
+    background-color: azure;
+}
+
+
+@media only screen and (max-width: 1430px) {
+    .ourStaffTable {
+        background-color: red;
+        padding-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .ourStaffTable {
+        background-color: red;
+        padding-left: 150px;
+
+    }
+}
