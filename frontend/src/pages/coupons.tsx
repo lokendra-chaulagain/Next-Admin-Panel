@@ -1,11 +1,10 @@
 import Appbar from "../components/Appbar";
-import DashboardCard1 from "../components/DashboardCard1";
 import LeftAppBar from "../components/LeftBar";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import DashboardCardRow2 from "../components/DashboardCardRow2";
+import CouponTable from "../components/CouponTable";
 
-export default function Home() {
+export default function Category() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Appbar />
@@ -23,8 +22,7 @@ export default function Home() {
             marginLeft: "-100px",
           }}
         >
-          <DashboardCard1 />
-          <DashboardCardRow2 />
+          <CouponTable />
         </Grid>
       </Grid>
     </Box>
