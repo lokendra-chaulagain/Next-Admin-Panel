@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import ProductTable from "../components/ProductTable";
 import ProductEditDrawer from "../components/ProductEditDwawer";
+import DeleteAlert from "../components/DeleteAlert";
 
 export default function Product() {
   return (
@@ -26,6 +27,7 @@ export default function Product() {
           <h1>Product</h1>
           <ProductTable />
           <ProductEditDrawer />
+          <DeleteAlert />
         </Grid>
       </Grid>
     </Box>
