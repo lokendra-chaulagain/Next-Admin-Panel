@@ -1,9 +1,14 @@
 import type { AppProps } from "next/app";
-import "../../styles/globals.css"
+import "../../styles/globals.css";
+import Appbar from "../components/Appbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-  
+  return (
+    <>
+      <Appbar />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
