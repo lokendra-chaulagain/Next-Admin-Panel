@@ -1,6 +1,7 @@
-
 import * as React from "react";
+import { useState, useEffect } from "react";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import axios from "axios";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -45,7 +46,38 @@ const rows = [
   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
 ];
 
-export default function CategoryTable() {
+export default function ProductTable() {
+  //====Traditional method of data fetching using useState and useEffect hooks====
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:4000/api/product/get1");
+        console.log(res.data);
+        setData(res.data);
+        setIsLoading(false);
+      } catch (error: any) {
+        setError(error.message);
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  console.log(data);
+
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
+
+  if (error) {
+    return <h2>{error}</h2>;
+  }
+
+  //====Fetching data using reactQuery====
+
   return (
     <div style={{ height: 400, width: "100%" }}>
       <DataGrid

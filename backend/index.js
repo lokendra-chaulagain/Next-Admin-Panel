@@ -3,8 +3,13 @@ const app = express();
 import * as dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
+import productRoute from "./routes/product.js";
+import cors from "cors"
 
 const port = process.env.PORT;
+
+app.use(express.json());
+app.use(cors())
 
 //DbConnection
 mongoose
@@ -20,6 +25,8 @@ mongoose
 app.get("/", (req, res) => {
   res.status(200).json({ message: "welcome to the server" });
 });
+
+app.use("/api/product", productRoute);
 
 //portListening
 app.listen(port, (error) => {

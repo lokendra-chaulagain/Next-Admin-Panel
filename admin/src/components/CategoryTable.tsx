@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useQuery } from "@tanstack/react-query"; //hook
+import axios from "axios";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 
 const columns: GridColDef[] = [
@@ -44,16 +46,41 @@ const rows = [
   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
 ];
 
-export default function ProductTable() {
+export default function CategoryTable() {
+  //useQuery hook requires at least two arguments
+  //first argument is unique key to identify this query
+  //second argument is a function that returns a promise
+  const fetchProduct = async () => {
+    return await axios.get("http://localhost:4000/api/product/get");
+  };
+  const { isLoading, data } = useQuery(["RQ-productData"], fetchProduct);
+
+  if (isLoading) {
+    return <h2>Loading....</h2>;
+  }
+
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      />
-    </div>
+    <>
+      <div style={{ height: 400, width: "100%" }}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          pageSize={5}
+          rowsPerPageOptions={[5]}
+          checkboxSelection
+        />
+
+        {/* Dummy test jsx */}
+      </div>
+      <div>
+        {data?.data.map((item: any, index: any) => (
+          <div key={index}>
+            <span>{item.name}</span>
+            <span>{item.comment}</span>
+            <span>{item.price}</span>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
