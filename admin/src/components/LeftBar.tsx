@@ -126,6 +126,27 @@ export default function LeftAppBar() {
             </ListItemButton>
           </List>
         </Collapse>
+
+        {/* Expanded Employees */}
+        <ListItemButton onClick={handleClick}>
+          <ListItemIcon>
+            <AutoStoriesOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText primary="Employees" />
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <Link href={"/allEmployees"}>
+                <ListItemText primary="All Employees" />
+              </Link>
+            </ListItemButton>
+          </List>
+        </Collapse>
       </List>
       <Divider />
     </Box>

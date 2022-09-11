@@ -63,7 +63,6 @@ export default function CategoryTable() {
       // refetchOnMount: false,
       // refetchOnMount: always,
       //every time we enter in this component the api request will be called
-
       // refetchOnWindowFocus==========
       //in traditional method when we update something on backend data will not automatically fetched we have to refresh
       //but react Query will directly update on frontend if changes happen on backend
@@ -71,22 +70,16 @@ export default function CategoryTable() {
       // refetchOnWindowFocus: true, //default
       // refetchOnWindowFocus:false
       // refetchOnWindowFocus:always
-
       //Polling =====================
       //Polling refers to the fetching of data at regular interval
       // real time stock like in every second
       //ui becomes in sync with remote data
-
       // refetchInterval: false, //default
       // refetchInterval: 2000,//query will fetch data in every 2 second
       //watch api request you will understand
-
       //Polling is paused if the window loose its focus
-
       //if we want background fetching the we should use
       // refetchIntervalInBackground:true
-
-
     }
   );
 
