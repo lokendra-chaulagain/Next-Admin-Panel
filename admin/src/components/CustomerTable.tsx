@@ -1,5 +1,7 @@
 import * as React from "react";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { useAppDispatch, useAppSelector } from "../features/hooks";
+import { fetchAllProduct } from "../features/product/productAction";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -45,6 +47,14 @@ const rows = [
 ];
 
 export default function CustomerTable() {
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    dispatch(fetchAllProduct());
+  }, [dispatch]);
+  const data = useAppSelector((state: any) => state.product);
+  console.log(data);
+
   return (
     <div style={{ height: 400, width: "100%" }}>
       <DataGrid

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useQuery } from "@tanstack/react-query"; //hook
+import { useQuery, QueryCache } from "@tanstack/react-query"; //hook
 import axios from "axios";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 
@@ -53,11 +53,23 @@ export default function CategoryTable() {
   const fetchProduct = async () => {
     return await axios.get("http://localhost:4000/api/product/get");
   };
-  const { isLoading, data } = useQuery(["RQ-productData"], fetchProduct);
+  // const data = useQuery(["RQ-productData"], fetchProduct);
+  //destructure
+  const { isLoading, isFetching, data, isError, error }: any = useQuery(
+    ["RQ-productData"],
+    fetchProduct
+  );
+
+  console.log({ isLoading, isFetching });
 
   if (isLoading) {
     return <h2>Loading....</h2>;
   }
+
+  if (isError) {
+    return <h2>{error.message}</h2>;
+  }
+  //Note:Before showing error message RQ tries 3 times to get the data when api request failed
 
   return (
     <>

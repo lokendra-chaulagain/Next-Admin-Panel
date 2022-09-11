@@ -55,7 +55,7 @@ export default function ProductTable() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/product/get1");
+        const res = await axios.get("http://localhost:4000/api/product/get");
         console.log(res.data);
         setData(res.data);
         setIsLoading(false);
