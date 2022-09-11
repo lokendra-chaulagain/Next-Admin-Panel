@@ -4,12 +4,11 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
 import productRoute from "./routes/product.js";
-import cors from "cors"
-
+import cors from "cors";
 const port = process.env.PORT;
 
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 //DbConnection
 mongoose
