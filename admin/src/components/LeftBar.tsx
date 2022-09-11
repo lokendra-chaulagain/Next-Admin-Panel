@@ -145,6 +145,42 @@ export default function LeftAppBar() {
                 <ListItemText primary="All Employees" />
               </Link>
             </ListItemButton>
+
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <Link href={"/leaves"}>
+                <ListItemText primary="Leaves" />
+              </Link>
+            </ListItemButton>
+
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <Link href={"/performance"}>
+                <ListItemText primary="Performance" />
+              </Link>
+            </ListItemButton>
+
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <Link href={"/allEmployees"}>
+                <ListItemText primary="Overtime" />
+              </Link>
+            </ListItemButton>
+
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <Link href={"/allEmployees"}>
+                <ListItemText primary="All Employees" />
+              </Link>
+            </ListItemButton>
           </List>
         </Collapse>
       </List>
