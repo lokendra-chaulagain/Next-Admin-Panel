@@ -56,12 +56,6 @@ const navItems = [
   },
 
   {
-    icon: <Person3OutlinedIcon />,
-    label: "Our Staff",
-    route: "/ourStaff",
-  },
-
-  {
     icon: <SettingsOutlinedIcon />,
     label: "Setting",
     route: "/setting",
@@ -137,6 +131,20 @@ export default function LeftAppBar() {
         </ListItemButton>
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
+
+
+          <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <Link href={"/staffDetails"}>
+                <ListItemText primary="Staff Details" />
+              </Link>
+            </ListItemButton>
+
+
+
+
             <ListItemButton sx={{ pl: 4 }}>
               <ListItemIcon>
                 <StarBorder />
@@ -170,15 +178,6 @@ export default function LeftAppBar() {
               </ListItemIcon>
               <Link href={"/allEmployees"}>
                 <ListItemText primary="Overtime" />
-              </Link>
-            </ListItemButton>
-
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <Link href={"/allEmployees"}>
-                <ListItemText primary="All Employees" />
               </Link>
             </ListItemButton>
           </List>
