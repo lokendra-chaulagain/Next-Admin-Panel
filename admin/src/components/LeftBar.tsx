@@ -131,9 +131,7 @@ export default function LeftAppBar() {
         </ListItemButton>
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-
-
-          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemButton sx={{ pl: 4 }}>
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
@@ -141,9 +139,6 @@ export default function LeftAppBar() {
                 <ListItemText primary="Staff Details" />
               </Link>
             </ListItemButton>
-
-
-
 
             <ListItemButton sx={{ pl: 4 }}>
               <ListItemIcon>
@@ -178,6 +173,15 @@ export default function LeftAppBar() {
               </ListItemIcon>
               <Link href={"/allEmployees"}>
                 <ListItemText primary="Overtime" />
+              </Link>
+            </ListItemButton>
+
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <Link href={"/attendance"}>
+                <ListItemText primary="Attendance" />
               </Link>
             </ListItemButton>
           </List>
