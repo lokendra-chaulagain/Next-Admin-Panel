@@ -11,10 +11,10 @@ import {
 
 export default function EmployeeProfileCard() {
   return (
-    <Card sx={{ maxWidth: 380, minWidth: 380 }}>
+    <Card sx={{ minWidth: 380 }} className="customProfileCard">
       <CardHeader
         action={
-          <IconButton aria-label="settings">
+          <IconButton aria-label="settings" className="customTernaryTxtColor">
             <MoreVertIcon />
           </IconButton>
         }
@@ -28,8 +28,12 @@ export default function EmployeeProfileCard() {
         <Avatar src="" alt="image" sx={{ width: 80, height: 80 }}>
           L
         </Avatar>
-        <Typography variant="h6">Lokendra Chaulagain</Typography>
-        <Typography variant="subtitle1">WebApp Developer</Typography>
+        <Typography variant="h6" className="customPrimaryTxtColor">
+          Lokendra Chaulagain
+        </Typography>
+        <Typography variant="subtitle1" className="customTernaryTxtColor">
+          WebApp Developer
+        </Typography>
       </Grid>
     </Card>
   );
