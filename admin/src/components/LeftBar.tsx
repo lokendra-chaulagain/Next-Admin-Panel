@@ -18,7 +18,9 @@ import ListItemText from "@mui/material/ListItemText";
 import StarBorder from "@mui/icons-material/StarBorder";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
+import { ExpandMore } from "@mui/icons-material";
+import Stack from "@mui/material/Stack";
+
 import Link from "next/link";
 
 const navItems = [
@@ -89,7 +91,7 @@ export default function LeftAppBar() {
     <Box>
       <List>
         {navItems.map((item, index) => (
-          <ListItem key={index} disablePadding>
+          <ListItem  key={index} disablePadding>
             <Link href={item.route}>
               <ListItemButton
                 selected={selectedIndex === index}
@@ -110,6 +112,7 @@ export default function LeftAppBar() {
           <ListItemText primary="Pages" />
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             <ListItemButton sx={{ pl: 4 }}>

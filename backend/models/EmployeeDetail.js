@@ -6,6 +6,11 @@ const employeeDetailSchema = new mongoose.Schema({
     required: "true",
   },
 
+  profileImg: {
+    type: String,
+    required: true,
+  },
+
   empId: {
     type: String,
     required: "true",

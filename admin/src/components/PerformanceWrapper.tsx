@@ -1,14 +1,26 @@
-import React from 'react'
-import LinearProgressBar from '../@mui/LinearProgressBar'
-import PerformanceGridTable from '../@mui/PerformanceGridTable'
+import React from "react";
+import AttendanceCard from "../@mui/AttendanceCard";
+import PerformanceGridTable from "../@mui/PerformanceGridTable";
+import { Grid } from "@mui/material";
 
 const PerformanceWrapper = () => {
   return (
     <div>
-        <PerformanceGridTable/>
-        <LinearProgressBar/>
-    </div>
-  )
-}
+      <PerformanceGridTable />
 
-export default PerformanceWrapper
+      <Grid container spacing={4}>
+        <Grid item sm={4}>
+          <AttendanceCard />
+        </Grid>
+        <Grid item sm={4}>
+          <AttendanceCard />
+        </Grid>
+        <Grid item sm={4}>
+          <AttendanceCard />
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
+
+export default PerformanceWrapper;

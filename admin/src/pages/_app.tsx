@@ -18,11 +18,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Box>
           <Appbar />
-          <Grid container spacing={2}>
-            <Grid item xs={3} lg={2}>
+          <Grid container>
+            <Grid item xs={3} lg={2} className="custom_sidebar">
               <LeftAppBar />
             </Grid>
-            <Grid item xs={9} lg={10}>
+            <Grid item xs={9} lg={10} p={5} className="custom_bg">
               <Component {...pageProps} />
             </Grid>
           </Grid>

@@ -5,6 +5,7 @@ dotenv.config();
 import mongoose from "mongoose";
 import productRoute from "./routes/product.js";
 import employeeDetailRoute from "./routes/employeeDetail.route.js";
+import attendanceRoute from "./routes/attendance.route.js";
 import cors from "cors";
 const port = process.env.PORT;
 
@@ -13,7 +14,9 @@ app.use(cors());
 
 //DbConnection
 mongoose
-  .connect(process.env.MONGO_DB_URI)
+  .connect(process.env.MONGO_DB_URI, {
+    autoIndex: true,
+  })
   .then(() => {
     console.log("MongoDb connected successfully !");
   })
@@ -28,6 +31,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/product", productRoute);
 app.use("/api/employeeDetail", employeeDetailRoute);
+app.use("/api/attendance", attendanceRoute);
 
 //portListening
 app.listen(port, (error) => {
