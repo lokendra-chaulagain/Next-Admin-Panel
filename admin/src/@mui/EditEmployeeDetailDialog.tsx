@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 import {
   DialogTitle,
   Grid,
@@ -10,28 +10,28 @@ import {
   DialogContent,
   TextField,
   Button,
-} from '@mui/material'
+} from "@mui/material";
 
-export default function AddEmployeeDetailDialog() {
-  const [open, setOpen] = React.useState(false)
+export default function EditEmployeeDetailDialog() {
+  const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <Box>
-      <Button variant="contained" size="large" onClick={handleClickOpen}>
-        Large
+      <Button variant="outlined" onClick={handleClickOpen}>
+        Edit
       </Button>
 
       <Dialog open={open} onClose={handleClose}>
         <Box className="customCard">
-          <DialogTitle>Add New Team MEmbers</DialogTitle>
+          <DialogTitle>Edit Team Member </DialogTitle>
           <DialogContent>
             <DialogContentText className="customPrimaryTxtColor">
               To subscribe to this website, please enter your email address
@@ -41,40 +41,40 @@ export default function AddEmployeeDetailDialog() {
             <Grid container spacing={2} mt={1}>
               <Grid item xs={6}>
                 <Typography color="secondary.main">Full Name</Typography>
-                <TextField fullWidth sx={{ marginTop: '5px' }} />
+                <TextField fullWidth sx={{ marginTop: "5px" }} />
               </Grid>
               <Grid item xs={6}>
                 <Typography>ID</Typography>
-                <TextField fullWidth sx={{ marginTop: '5px' }} />
+                <TextField fullWidth sx={{ marginTop: "5px" }} />
               </Grid>
             </Grid>
 
             <Grid container spacing={2} mt={1}>
               <Grid item xs={6}>
                 <Typography>Position</Typography>
-                <TextField fullWidth sx={{ marginTop: '5px' }} />
+                <TextField fullWidth sx={{ marginTop: "5px" }} />
               </Grid>
               <Grid item xs={6}>
                 <Typography>Age</Typography>
-                <TextField fullWidth sx={{ marginTop: '5px' }} />
+                <TextField fullWidth sx={{ marginTop: "5px" }} />
               </Grid>
             </Grid>
 
             <Grid container spacing={2} mt={1}>
               <Grid item xs={6}>
                 <Typography>Contact</Typography>
-                <TextField fullWidth sx={{ marginTop: '5px' }} />
+                <TextField fullWidth sx={{ marginTop: "5px" }} />
               </Grid>
               <Grid item xs={6}>
                 <Typography>Email</Typography>
-                <TextField fullWidth sx={{ marginTop: '5px' }} />
+                <TextField fullWidth sx={{ marginTop: "5px" }} />
               </Grid>
             </Grid>
 
             <Grid container spacing={2} mt={2}>
               <Grid item xs={12}>
                 <Typography>Description</Typography>
-                <TextField fullWidth sx={{ marginTop: '5px' }} />
+                <TextField fullWidth sx={{ marginTop: "5px" }} />
               </Grid>
             </Grid>
           </DialogContent>
@@ -85,5 +85,5 @@ export default function AddEmployeeDetailDialog() {
         </Box>
       </Dialog>
     </Box>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import DashboardCard1 from "../components/DashboardCard1";
-import { Box, Grid } from "@mui/material";
-import DashboardCardRow2 from "../components/DashboardCardRow2";
+import DashboardCard1 from '../components/DashboardCard1'
+import { Box, Grid } from '@mui/material'
+import DashboardCardRow2 from '../components/DashboardCardRow2'
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <DashboardCard1 />
       <DashboardCardRow2 />
     </Box>
-  );
+  )
 }

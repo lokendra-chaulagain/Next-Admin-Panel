@@ -49,7 +49,7 @@ a:hover {
     --fw-700: 700;
     --fw-800: 800;
     --color-primary: #000000;
-    --color-secondary: #CA2790;
+
     --color-dark: rgb(27, 27, 27);
     --color-white: #fff;
     --color-gray: rgb(240, 238, 238);
@@ -66,15 +66,18 @@ a:hover {
     --border-radius-15: 15px;
     --border-radius-20: 20px;
     /* ========================= */
+    --color-secondary: #ff9b44;
     --dark-color: #16181d;
     --dark-grey-color: #22262b;
     --leftbar-txt-color: #8b95a0;
     --primary-text-color: #bac5cc;
     --secondary-text-color: #6d757c;
     --ternary-text-color: #7e7e80;
-    --border-color: #2d353d;
-    /* #6d757c
-    #6d757c */
+    --border-color: #2d3741;
+    --primary-heading-color: #bac4cd;
+    --secondary-heading-color: #7e7e80;
+
+
 
 
     /*===========================  */
@@ -93,6 +96,17 @@ a:hover {
 
 
 /*==Loki==========================  */
+
+/* primaryHeadingColor */
+.phc {
+    color: var(--primary-heading-color)
+}
+
+/*  */
+.shc {
+    color: var(--primary-heading-color)
+}
+
 .customBg {
     background-color: var(--dark-grey-color);
 }
@@ -123,7 +137,26 @@ a:hover {
 
 .customCard {
     background-color: var(--dark-color);
-    border: 1px solid var(--border-color)
+    border: 1px solid var(--border-color);
+    color: var(--primary-text-color);
+}
+
+/* .customBorder {
+ 
+    border: 1.5px solid var(--border-color);
+    
+} */
+/* .MuiOutlinedInput-root{
+    border-color: red;
+    color: green;
+} */
+
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+
+    border: 1px solid var(--color-secondary);
+
+
 }
 
 
@@ -131,8 +164,7 @@ a:hover {
 
 .customProfileCard {
     background-color: var(--dark-color);
-    color: var(---primary-text-color);
-    border: 1px solid var(--border-color)
+    border: 1px solid var(--border-color);
 }
 
 /*=====================  */

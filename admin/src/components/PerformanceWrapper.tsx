@@ -2,6 +2,8 @@ import React from "react";
 import AttendanceCard from "../@mui/AttendanceCard";
 import PerformanceGridTable from "../@mui/PerformanceGridTable";
 import { Grid } from "@mui/material";
+import OfficeEntryPerformanceCard from "../@mui/OfficeEntryPerformanceCard";
+import OfficeExitPerformanceCard from "../@mui/OfficeExitPerformanceCard";
 
 const PerformanceWrapper = () => {
   return (
@@ -13,10 +15,10 @@ const PerformanceWrapper = () => {
           <AttendanceCard />
         </Grid>
         <Grid item sm={4}>
-          <AttendanceCard />
+          <OfficeEntryPerformanceCard />
         </Grid>
         <Grid item sm={4}>
-          <AttendanceCard />
+          <OfficeExitPerformanceCard />
         </Grid>
       </Grid>
     </div>

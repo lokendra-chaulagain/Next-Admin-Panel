@@ -1,37 +1,38 @@
-import * as React from "react";
-import Typography from "@mui/material/Typography";
+import * as React from 'react'
 import {
   Box,
+  Typography,
   Avatar,
   LinearProgress,
   LinearProgressProps,
-} from "@mui/material";
+} from '@mui/material'
 
 function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number }
 ) {
   return (
-    <Box sx={{ display: "flex", alignItems: "center" }}>
-      <Box>
-        <Avatar>L</Avatar>
-      </Box>
-      <Box sx={{ width: "100%", mr: 1 }}>
-        <LinearProgress variant="determinate" {...props} />
-      </Box>
-      <Box>
-        <Typography variant="body2" color="text.secondary">
-          {props.value}%
-        </Typography>
-      </Box>
+    <Box sx={{ display: 'flex', alignItems: 'center' }} >
+      <Avatar>L</Avatar>
+
+      <LinearProgress
+        sx={{ width: '100%', mr: 1 }}
+        variant="determinate"
+        {...props}
+      />
+      <Typography variant="body2" className="phc">
+        {props.value}%
+      </Typography>
     </Box>
-  );
+  )
 }
 
 export default function AttendanceProgressBar() {
-  const [progress, setProgress] = React.useState(20);
+  const [progress, setProgress] = React.useState(20)
 
   return (
-    <Box sx={{ width: "100%" }}>
+   
+  
+    <Box >
       <LinearProgressWithLabel value={progress} />
       <LinearProgressWithLabel value={progress} />
       <LinearProgressWithLabel value={progress} />
@@ -41,6 +42,7 @@ export default function AttendanceProgressBar() {
       <LinearProgressWithLabel value={progress} />
       <LinearProgressWithLabel value={progress} />
       <LinearProgressWithLabel value={progress} />
+    
     </Box>
-  );
+  )
 }

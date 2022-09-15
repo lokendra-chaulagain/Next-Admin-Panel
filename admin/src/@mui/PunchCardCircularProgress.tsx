@@ -1,15 +1,14 @@
-import * as React from "react";
+import * as React from 'react'
 import CircularProgress, {
   CircularProgressProps,
-} from "@mui/material/CircularProgress";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+} from '@mui/material/CircularProgress'
+import { Typography, Box } from '@mui/material'
 
 function CircularProgressWithLabel(
   props: CircularProgressProps & { value: number }
 ) {
   return (
-    <Box sx={{ position: "relative", display: "inline-flex" }}>
+    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
       <CircularProgress variant="determinate" {...props} />
       <Box
         sx={{
@@ -17,10 +16,10 @@ function CircularProgressWithLabel(
           left: 0,
           bottom: 0,
           right: 0,
-          position: "absolute",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         <Typography
@@ -30,20 +29,20 @@ function CircularProgressWithLabel(
         >{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>
-  );
+  )
 }
 
 export default function PunchCardCircularProgress() {
-  const [progress, setProgress] = React.useState(80);
+  const [progress, setProgress] = React.useState(80)
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress(progress);
-    });
+      setProgress(progress)
+    })
     return () => {
-      clearInterval(timer);
-    };
-  }, [progress]);
+      clearInterval(timer)
+    }
+  }, [progress])
 
-  return <CircularProgressWithLabel value={progress} />;
+  return <CircularProgressWithLabel value={progress} />
 }
