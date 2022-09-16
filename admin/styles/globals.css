@@ -142,8 +142,8 @@ a:hover {
 
 .customNavbar {
     background-color: var(--dark-color);
-    color: var(---primary-text-color);
-    border-bottom: 1px solid var(--border-color)
+    border-bottom: 2px solid var(--border-color);
+    color: var(--primary-text-color);
 }
 
 .customLeftBar {

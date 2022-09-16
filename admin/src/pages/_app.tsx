@@ -40,36 +40,41 @@ function MyApp({ Component, pageProps }: AppProps) {
                   <Component {...pageProps} />
                 </Grid>
               ) : (
-                <Grid container>
-                  <Grid item xs={3} lg={2} className="customLeftBar">
-                    <LeftAppBar />
-                  </Grid>
-                  <Grid item xs={9} lg={10} p={5} className="custom_bg">
-                    <Grid marginBottom={5} xs={6}>
-                      <Typography
-                        variant="h4"
-                        className="customPrimaryTxtColor"
-                      >
-                        Attendance
-                      </Typography>
-                      <Typography
-                        variant="h6"
-                        className="customSecondaryTxtColor"
-                      >
-                        <span className="customPrimaryTxtColor">Dashboard</span>
-
-                        <span className="customSecondaryTxtColor">
-                          Attendance
-                        </span>
-
-                        <span className="customSecondaryTxtColor">
-                          Something
-                        </span>
-                      </Typography>
+                <>
+                  <Appbar />
+                  <Grid container>
+                    <Grid item xs={3} lg={2} className="customLeftBar">
+                      <LeftAppBar />
                     </Grid>
-                    <Component {...pageProps} />
+                    <Grid item xs={9} lg={10} p={5} className="custom_bg">
+                      <Grid item marginBottom={5} xs={6}>
+                        <Typography
+                          variant="h4"
+                          className="customPrimaryTxtColor"
+                        >
+                          Attendance
+                        </Typography>
+                        <Typography
+                          variant="h6"
+                          className="customSecondaryTxtColor"
+                        >
+                          <span className="customPrimaryTxtColor">
+                            Dashboard
+                          </span>
+
+                          <span className="customSecondaryTxtColor">
+                            Attendance
+                          </span>
+
+                          <span className="customSecondaryTxtColor">
+                            Something
+                          </span>
+                        </Typography>
+                      </Grid>
+                      <Component {...pageProps} />
+                    </Grid>
                   </Grid>
-                </Grid>
+                </>
               )}
             </>
           </Box>

@@ -12,13 +12,13 @@ const EmployeeEmergencyContactCard = () => {
         <EditOutlinedIcon className="cp" />
       </Grid>
       <Grid container>
-        <Grid xs={6}>
+        <Grid item  xs={6}>
           <Typography mt={1}>Name</Typography>
           <Typography mt={1}>Relationship</Typography>
           <Typography mt={1}>phone</Typography>
           <Typography mt={1}>Secondary Phone</Typography>
         </Grid>
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <Typography mt={1}>Dev Krishna Chaulagain</Typography>
           <Typography mt={1}>Father</Typography>
           <Typography mt={1}>123456799</Typography>
@@ -31,12 +31,12 @@ const EmployeeEmergencyContactCard = () => {
       </Box>
 
       <Grid container>
-        <Grid xs={6}>
+        <Grid item  xs={6}>
           <Typography mt={1}>Name</Typography>
           <Typography mt={1}>Relationship</Typography>
           <Typography mt={1}>phone</Typography>
         </Grid>
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <Typography mt={1}>Laxmi Chaulagain</Typography>
           <Typography mt={1}>Mother</Typography>
           <Typography mt={1}>123456799</Typography>

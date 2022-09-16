@@ -12,7 +12,7 @@ const EmployeePersonalInformationCard = () => {
         <EditOutlinedIcon className="cp" />
       </Grid>
       <Grid container>
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <Typography mt={1}>Citizen No.</Typography>
           <Typography mt={1}>Nationality</Typography>
           <Typography mt={1}>Material Status</Typography>
@@ -23,7 +23,7 @@ const EmployeePersonalInformationCard = () => {
           <Typography mt={1}>PAN no</Typography>
           
         </Grid>
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <Typography mt={1}>123456789</Typography>
           <Typography mt={1}>Nepali</Typography>
           <Typography mt={1}>Married</Typography>
