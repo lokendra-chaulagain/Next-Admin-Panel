@@ -70,12 +70,15 @@ a:hover {
     --dark-color: #16181d;
     --dark-grey-color: #22262b;
     --leftbar-txt-color: #8b95a0;
-    --primary-text-color: #bac5cc;
+    --primary-text-color: #bbc4cc;
     --secondary-text-color: #6d757c;
     --ternary-text-color: #7e7e80;
     --border-color: #2d3741;
     --primary-heading-color: #bac4cd;
     --secondary-heading-color: #7e7e80;
+    --label-color: #7F8Fa4;
+    --text-muted: #8e8e8e;
+
 
 
 
@@ -102,9 +105,35 @@ a:hover {
     color: var(--primary-heading-color)
 }
 
+
+.customLabel {
+    color: var(--label-color);
+}
+
+.txtMuted {
+    color: var(--text-muted);
+}
+
+.customSecondaryColor {
+    color: var(--color-secondary);
+}
+
 /*  */
 .shc {
     color: var(--primary-heading-color)
+}
+
+.customInput {
+    background-color: #2e3538;
+    color: #bbc3c9;
+    border-radius: 5px;
+
+}
+
+
+/* crusor pointer */
+.cp {
+    cursor: pointer;
 }
 
 .customBg {
