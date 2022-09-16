@@ -2,6 +2,7 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import EmployeeEducationCard from '../../@mui/EmployeeEducationCard'
 import EmployeeEmergencyContactCard from '../../@mui/EmployeeEmergencyContactCard'
+import EmployeeExperienceCard from '../../@mui/EmployeeExperienceCard'
 import EmployeeInfoCrd from '../../@mui/EmployeeInfoCrd'
 import EmployeePersonalInformationCard from '../../@mui/EmployeePersonalInformationCard'
 
@@ -20,10 +21,10 @@ function EmployeeId() {
 
       <Grid container gap={3}>
         <Grid item xs={5.9}>
-          {/* <EmployeeEducationCard/> */}
+          <EmployeeEducationCard/>
         </Grid>
         <Grid item xs={5.9}>
-          <EmployeeEmergencyContactCard />
+          <EmployeeExperienceCard />
         </Grid>
       </Grid>
     </>
