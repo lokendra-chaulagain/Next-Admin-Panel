@@ -1,5 +1,5 @@
 import React from "react";
-import AllEmployeesWrapper from "../components/AllEmployeesWrapper";
+import AllEmployeesWrapper from "../../components/AllEmployeesWrapper";
 
 export const AllEmployees = () => {
   return (
