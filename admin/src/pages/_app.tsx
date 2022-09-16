@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import '../../styles/globals.css'
-import Appbar from '../components/Appbar'
+import Topbar from '../components/Topbar'
 import { Box, colors, Grid, Typography } from '@mui/material'
 import LeftAppBar from '../components/LeftBar'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -8,7 +8,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Provider } from 'react-redux'
 import { store } from '../../app/store'
 import { createTheme, ThemeProvider } from '@mui/material'
-import { borderColor } from '@mui/system'
 import { useRouter } from 'next/router'
 
 const theme = createTheme({
@@ -22,15 +21,12 @@ const theme = createTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
-  // console.log(router.pathname.split('/')[1])
   const location = router.pathname.split('/')[1]
 
-  //creating instance of a query client
   const queryCLient = new QueryClient()
 
   return (
     <QueryClientProvider client={queryCLient}>
-      {/* passing queryClient instance to client props */}
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <Box className="customBg" style={{ height: '100vh' }}>
@@ -41,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 </Grid>
               ) : (
                 <>
-                  <Appbar />
+                  <Topbar />
                   <Grid container>
                     <Grid item xs={3} lg={2} className="customLeftBar">
                       <LeftAppBar />

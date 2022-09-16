@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import MailDialogBox from './MailDialogBox'
 import NotificationDialogBox from './NotificationDialogBox'
 
-export default function Appbar() {
+export default function Topbar() {
   return (
     <AppBar position="static" className="customNavbar">
       <Toolbar>
@@ -12,7 +12,7 @@ export default function Appbar() {
           <Box>
             <Grid container alignItems="center" gap={2}>
               <MenuIcon className="cp" />
-              <Typography variant="h6">MUI</Typography>
+              <Typography variant="h6">DASHBOARD</Typography>
             </Grid>
           </Box>
 
