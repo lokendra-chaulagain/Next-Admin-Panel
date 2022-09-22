@@ -25,9 +25,11 @@ export default function AddEmployeeDetailDialog() {
 
   return (
     <Box>
-      <Button variant="contained" size="large" onClick={handleClickOpen}>
-        Large
-      </Button>
+      <Grid container justifyContent="end">
+        <Button variant="contained" size="large" onClick={handleClickOpen}>
+          Add Member
+        </Button>
+      </Grid>
 
       <Dialog open={open} onClose={handleClose}>
         <Box className="customCard">

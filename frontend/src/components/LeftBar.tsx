@@ -31,7 +31,7 @@ const navItems = [
   },
   {
     icon: <ShoppingBagOutlinedIcon />,
-    label: "Products",
+    label: "Product",
     route: "/product",
   },
   {
@@ -59,8 +59,8 @@ const navItems = [
 
   {
     icon: <SettingsOutlinedIcon />,
-    label: "Setting",
-    route: "/setting",
+    label: "Settings",
+    route: "/settings",
   },
 ];
 

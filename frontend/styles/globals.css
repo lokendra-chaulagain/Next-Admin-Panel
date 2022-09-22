@@ -372,3 +372,10 @@ a:hover {
     background-color: var(--card-bg-color);
     border: 1px solid rgb(186, 199, 186);
 }
+
+
+/* disable select on grid table */
+.MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
+.MuiDataGrid-root .MuiDataGrid-cell:focus {
+    outline: none;
+}

@@ -6,8 +6,8 @@ import DeleteIcon from '@mui/icons-material/Delete'
 
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import AddEmployeeDetailDialog from './AddEmployeeDetailDialog'
-import EditEmployeeDetailDialog from './EditEmployeeDetailDialog'
+import EditProductDialog from './EditProductDialog'
+import AddProductDialog from './AddProductDialog'
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'SN', width: 20 },
@@ -85,7 +85,7 @@ const columns: GridColDef[] = [
       // return <Button onClick={onClick}>Click</Button>;
       return (
         <Stack direction="row">
-          <EditEmployeeDetailDialog onClick={handleEditClick} />
+          <EditProductDialog onClick={handleEditClick} />
           <IconButton aria-label="delete" size="large">
             <DeleteIcon fontSize="inherit" color="warning" />
           </IconButton>
@@ -130,7 +130,7 @@ const rows = [
   },
 ]
 
-export default function StaffDetailsGridTable() {
+export default function ProductGridTable() {
   const fetchAllEmployeeDetail = async () => {
     return axios.get('http://localhost:4000/api/employeeDetail/getAll')
   }
@@ -144,7 +144,7 @@ export default function StaffDetailsGridTable() {
 
   return (
     <Box sx={{ height: 400, width: '100%' }}>
-      <AddEmployeeDetailDialog />
+      <AddProductDialog />
 
       <DataGrid
         className="customCard"
