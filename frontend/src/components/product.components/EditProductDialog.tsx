@@ -14,7 +14,7 @@ import {
 } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
 
-export default function EditEmployeeDetailDialog() {
+export default function EditProductDialog() {
   const [open, setOpen] = React.useState(false)
 
   const handleClickOpen = () => {

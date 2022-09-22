@@ -10,11 +10,9 @@ import {
   DialogContent,
   TextField,
   Button,
-  IconButton,
 } from '@mui/material'
-import EditIcon from '@mui/icons-material/Edit'
 
-export default function EditEmployeeDetailDialog() {
+export default function AddProductDialog() {
   const [open, setOpen] = React.useState(false)
 
   const handleClickOpen = () => {
@@ -27,17 +25,15 @@ export default function EditEmployeeDetailDialog() {
 
   return (
     <Box>
-      {/* <Button variant="outlined" onClick={handleClickOpen}>
-        Edit
-      </Button> */}
-
-      <IconButton aria-label="delete" size="large">
-        <EditIcon fontSize="inherit" color='primary' />
-      </IconButton>
+      <Grid container justifyContent="end">
+        <Button variant="contained" size="large" onClick={handleClickOpen}>
+          Add Product
+        </Button>
+      </Grid>
 
       <Dialog open={open} onClose={handleClose}>
         <Box className="customCard">
-          <DialogTitle>Edit Team Member </DialogTitle>
+          <DialogTitle>Add New Team MEmbers</DialogTitle>
           <DialogContent>
             <DialogContentText className="customPrimaryTxtColor">
               To subscribe to this website, please enter your email address
