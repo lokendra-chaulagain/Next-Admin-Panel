@@ -1,11 +1,8 @@
 import * as React from 'react'
-import { Box, Button, IconButton, Grid, Stack } from '@mui/material'
-// import { DataGrid, GridApi, GridCellValue, GridColDef } from '@mui/x-data-grid'
+import { Box, IconButton, Grid, Stack } from '@mui/material'
 import { DataGrid, GridColDef, GridApi, GridCellValue } from '@mui/x-data-grid'
 import DeleteIcon from '@mui/icons-material/Delete'
 
-import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 import AddEmployeeDetailDialog from './AddEmployeeDetailDialog'
 import EditEmployeeDetailDialog from './EditEmployeeDetailDialog'
 
@@ -131,17 +128,6 @@ const rows = [
 ]
 
 export default function StaffDetailsGridTable() {
-  const fetchAllEmployeeDetail = async () => {
-    return axios.get('http://localhost:4000/api/employeeDetail/getAll')
-  }
-
-  const { data, isError, error, isLoading } = useQuery(
-    ['RQ-AllEmployeeDetail'],
-    fetchAllEmployeeDetail
-  )
-  console.log(data)
-  console.log({ isLoading, isError, error })
-
   return (
     <Box sx={{ height: 400, width: '100%' }}>
       <AddEmployeeDetailDialog />

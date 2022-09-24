@@ -1,106 +1,109 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import GridViewIcon from "@mui/icons-material/GridView";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
-import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
-import FactCheckOutlinedIcon from "@mui/icons-material/FactCheckOutlined";
-import CardGiftcardOutlinedIcon from "@mui/icons-material/CardGiftcardOutlined";
-import Person3OutlinedIcon from "@mui/icons-material/Person3Outlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import StarBorder from "@mui/icons-material/StarBorder";
-import Collapse from "@mui/material/Collapse";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import { ExpandMore } from "@mui/icons-material";
-import Stack from "@mui/material/Stack";
+import * as React from 'react'
+import Box from '@mui/material/Box'
+import Divider from '@mui/material/Divider'
+import GridViewIcon from '@mui/icons-material/GridView'
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined'
+import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined'
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined'
+import FactCheckOutlinedIcon from '@mui/icons-material/FactCheckOutlined'
+import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined'
+import Person3OutlinedIcon from '@mui/icons-material/Person3Outlined'
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
+import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import StarBorder from '@mui/icons-material/StarBorder'
+import Collapse from '@mui/material/Collapse'
+import ExpandLess from '@mui/icons-material/ExpandLess'
+import { ExpandMore } from '@mui/icons-material'
+import Stack from '@mui/material/Stack'
+import { useRouter } from 'next/router'
 
-import Link from "next/link";
+import Link from 'next/link'
 
 const navItems = [
   {
     icon: <GridViewIcon />,
-    label: "Dashboard",
-    route: "/",
+    label: 'Dashboard',
+    route: '/',
   },
   {
     icon: <ShoppingBagOutlinedIcon />,
-    label: "Product",
-    route: "/product",
+    label: 'Product',
+    route: '/product',
   },
   {
     icon: <FormatListBulletedOutlinedIcon />,
-    label: "Category",
-    route: "/category",
+    label: 'Category',
+    route: '/category',
   },
   {
     icon: <PeopleAltOutlinedIcon />,
-    label: "Customers",
-    route: "/customer",
+    label: 'Customers',
+    route: '/customer',
   },
 
   {
     icon: <FactCheckOutlinedIcon />,
-    label: "Orders",
-    route: "/order",
+    label: 'Orders',
+    route: '/order',
   },
 
   {
     icon: <CardGiftcardOutlinedIcon />,
-    label: "Coupons",
-    route: "/coupon",
+    label: 'Coupons',
+    route: '/coupon',
   },
 
   {
     icon: <SettingsOutlinedIcon />,
-    label: "Settings",
-    route: "/settings",
+    label: 'Settings',
+    route: '/settings',
   },
-];
+]
 
 export default function LeftAppBar() {
+  const router = useRouter()
+
   //   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = React.useState(false)
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+    setMobileOpen(!mobileOpen)
+  }
 
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(true)
 
   const handleClick = () => {
-    setOpen(!open);
-  };
+    setOpen(!open)
+  }
 
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
-
+  // NavSelection
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
   const handleListItemClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     index: number
   ) => {
-    setSelectedIndex(index);
-  };
+    setSelectedIndex(index)
+  }
 
   return (
     <Box>
       <List>
         {navItems.map((item, index) => (
-          <ListItem  key={index} disablePadding>
-            <Link href={item.route}>
-              <ListItemButton
-                selected={selectedIndex === index}
-                onClick={(event) => handleListItemClick(event, index)}
-              >
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.label} />
-              </ListItemButton>
-            </Link>
+          <ListItem key={index} disablePadding>
+            <ListItemButton
+              selected={selectedIndex === index}
+              onClick={(event) => {
+                handleListItemClick(event, index), router.push(item.route)
+              }}
+            >
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.label} />
+            </ListItemButton>
           </ListItem>
         ))}
 
@@ -138,7 +141,7 @@ export default function LeftAppBar() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <Link href={"/staffDetails"}>
+              <Link href={'/staffDetails'}>
                 <ListItemText primary="Staff Details" />
               </Link>
             </ListItemButton>
@@ -147,7 +150,7 @@ export default function LeftAppBar() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <Link href={"/allEmployees"}>
+              <Link href={'/allEmployees'}>
                 <ListItemText primary="All Employees" />
               </Link>
             </ListItemButton>
@@ -156,7 +159,7 @@ export default function LeftAppBar() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <Link href={"/leaves"}>
+              <Link href={'/leaves'}>
                 <ListItemText primary="Leaves" />
               </Link>
             </ListItemButton>
@@ -165,7 +168,7 @@ export default function LeftAppBar() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <Link href={"/performance"}>
+              <Link href={'/performance'}>
                 <ListItemText primary="Performance" />
               </Link>
             </ListItemButton>
@@ -174,7 +177,7 @@ export default function LeftAppBar() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <Link href={"/allEmployees"}>
+              <Link href={'/allEmployees'}>
                 <ListItemText primary="Overtime" />
               </Link>
             </ListItemButton>
@@ -183,7 +186,7 @@ export default function LeftAppBar() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <Link href={"/attendance"}>
+              <Link href={'/attendance'}>
                 <ListItemText primary="Attendance" />
               </Link>
             </ListItemButton>
@@ -192,5 +195,5 @@ export default function LeftAppBar() {
       </List>
       <Divider />
     </Box>
-  );
+  )
 }
