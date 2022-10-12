@@ -1,12 +1,12 @@
-import { Box } from '@mui/material'
-import RegisterBox from '../components/RegisterBox'
+import { Grid } from "@mui/material";
+import RegisterBox from "../components/RegisterBox";
 
 function Register() {
   return (
-    <Box>
+    <Grid container justifyContent="center">
       <RegisterBox />
-    </Box>
-  )
+    </Grid>
+  );
 }
 
-export default Register
+export default Register;

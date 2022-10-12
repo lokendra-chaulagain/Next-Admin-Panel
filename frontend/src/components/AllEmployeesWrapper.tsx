@@ -1,12 +1,10 @@
 import * as React from "react";
 import { Grid } from "@mui/material";
 import EmployeeProfileCard from "../@mui/EmployeeProfileCard";
-import AttendancePunchCard from "../@mui/AttendancePunchCard";
 
 export default function AllEmployeesWrapper() {
   return (
-    <Grid container gap={5}>
-       <AttendancePunchCard/>
+    <Grid className="mt-5 pt-5 d-flex flex-wrap justify-content-between">
       <EmployeeProfileCard />
       <EmployeeProfileCard />
       <EmployeeProfileCard />
@@ -16,7 +14,6 @@ export default function AllEmployeesWrapper() {
       <EmployeeProfileCard />
       <EmployeeProfileCard />
       <EmployeeProfileCard />
-     
     </Grid>
   );
 }

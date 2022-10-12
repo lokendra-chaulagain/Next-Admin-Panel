@@ -1,12 +1,10 @@
 import * as React from "react";
-import { Box, Button, IconButton, Grid, Stack } from "@mui/material";
-// import { DataGrid, GridApi, GridCellValue, GridColDef } from '@mui/x-data-grid'
+import { Box, IconButton, Grid, Stack } from "@mui/material";
 import { DataGrid, GridColDef, GridApi, GridCellValue } from "@mui/x-data-grid";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-import axios from "axios";
-import EditProductDialog from "./EditProductDialog";
-import AddProductDialog from "./AddProductDialog";
+import AddEmployeeDetailDialog from "./AddEmployeeDetailDialog";
+import EditEmployeeDetailDialog from "./EditEmployeeDetailDialog";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "SN", width: 20 },
@@ -82,7 +80,7 @@ const columns: GridColDef[] = [
       // return <Button onClick={onClick}>Click</Button>;
       return (
         <Stack direction="row">
-          <EditProductDialog />
+          <EditEmployeeDetailDialog onClick={handleEditClick} />
           <IconButton aria-label="delete" size="large">
             <DeleteIcon fontSize="inherit" color="warning" />
           </IconButton>
@@ -96,7 +94,7 @@ const rows = [
   {
     id: 1,
     fullName: "fullName",
-    age: 22,
+    age: "22",
     empID: 763,
     position: "WebApp Developer",
     contact: "9864755749",
@@ -127,11 +125,9 @@ const rows = [
   },
 ];
 
-export default function ProductGridTable() {
+export default function AttendanceGridTable1() {
   return (
     <Box sx={{ height: 400, width: "100%" }}>
-      <AddProductDialog />
-
       <DataGrid className="customCard" rows={rows} columns={columns} pageSize={5} rowsPerPageOptions={[5]} disableSelectionOnClick experimentalFeatures={{ newEditingApi: true }} />
     </Box>
   );

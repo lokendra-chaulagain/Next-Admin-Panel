@@ -1,37 +1,17 @@
-import * as React from 'react'
-import {
-  Box,
-  CardContent,
-  Typography,
-  TextField,
-  Button,
-  Grid,
-} from '@mui/material'
-import { useFormik } from 'formik'
-import { Formik } from 'formik'
-
-const initialValues = {
-  email: '',
-  password: '',
-  confirmPassword: '',
-}
-
-const onSubmit = (values: any) => {
-  console.log(values)
-}
+import * as React from "react";
+import { Box, CardContent, Typography, TextField, Button, Grid } from "@mui/material";
+import { useRouter } from "next/router";
 
 export default function RegisterBox() {
-  //useFormik hooks takes an object as an parameter
-  const formik = useFormik({
-    initialValues,
-    onsubmit,
-  } as any)
+  const router = useRouter();
 
-  console.log('Formik Values :', formik.values)
+  const handleRegister=()=>{
+    router.push("/")
+  }
 
   return (
     <Grid minWidth="500px" className="customCard">
-      <form onSubmit={formik.handleSubmit}>
+      <form>
         <CardContent>
           <Grid container direction="column" alignItems="center">
             <Typography variant="h4">Register</Typography>
@@ -40,61 +20,39 @@ export default function RegisterBox() {
 
           <Box mt={3}>
             <Typography className="customLabel">Email Address</Typography>
-            <TextField
-              fullWidth
-              id="fullWidth"
-              className="customInput"
-              type="email"
-              autoComplete="off"
-              name="email"
-              //here onChange props tracks the values and we assign that value to values props
-              onChange={formik.handleChange}
-              value={formik.values.email}
-            />
+            <TextField fullWidth id="fullWidth" className="customInput" type="email" autoComplete="off" name="email" />
           </Box>
 
           <Box mt={3}>
             <Typography className="customLabel">Password</Typography>
-            <TextField
-              fullWidth
-              id="fullWidth"
-              className="customInput"
-              type="password"
-              autoComplete="current-password"
-              name="password"
-              onChange={formik.handleChange}
-              value={formik.values.password}
-            />
+            <TextField fullWidth id="fullWidth" className="customInput" type="password" autoComplete="current-password" name="password" />
           </Box>
 
           <Box mt={3}>
             <Typography className="customLabel">Confirm Password</Typography>
-            <TextField
-              fullWidth
-              id="fullWidth"
-              className="customInput"
-              type="password"
-              autoComplete="current-password"
-              name="confirmPassword"
-              onChange={formik.handleChange}
-              value={formik.values.confirmPassword}
-            />
+            <TextField fullWidth id="fullWidth" className="customInput" type="password" autoComplete="current-password" name="confirmPassword" />
           </Box>
 
           <Box mt={3}>
-            <Button type="submit" fullWidth size="large" variant="contained">
+            <Button type="submit" fullWidth size="large" variant="contained"  onClick={handleRegister}  >
               Register
             </Button>
           </Box>
 
           <Box mt={3}>
             <Grid container justifyContent="center">
-              <Typography>Already have an account? </Typography>
-              <Typography className="customSecondaryColor cp">Login</Typography>
+              <Typography>Already have an account ?</Typography>
+              <Typography
+                className="customSecondaryColor cp"
+                onClick={() => {
+                  router.push("/login");
+                }}>
+                Login
+              </Typography>
             </Grid>
           </Box>
         </CardContent>
       </form>
     </Grid>
-  )
+  );
 }
