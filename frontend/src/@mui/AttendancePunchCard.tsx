@@ -1,36 +1,25 @@
-import * as React from 'react'
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import CircularProgress, {
-  CircularProgressProps,
-} from '@mui/material/CircularProgress'
-import PunchCardCircularProgress from './PunchCardCircularProgress'
-import { Grid } from '@mui/material'
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import CircularProgress, { CircularProgressProps } from "@mui/material/CircularProgress";
+import PunchCardCircularProgress from "./PunchCardCircularProgress";
+import { Grid } from "@mui/material";
 
 const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
+  <Box component="span" sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}>
     •
   </Box>
-)
+);
 
 export default function AttendancePunchCard() {
   return (
-    <Card className="customCard">
-      {/* sx={{ minWidth: 600 }} */}
+    <Card className="customCard d-flex flex-column justify-content-center align-items-center my-5 pb-3" style={{ width: "600px" }}>
       <CardContent>
-        {/* <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
-          sx={{ mb: 1.5 }} color="text.secondary"
-        </Typography> */}
-
-        <Typography style={{ display: 'flex', alignItems: 'center' }}>
+        <Typography className="d-flex align-items-center gap-5">
           <Typography variant="h4" className="phc">
             Timesheet
           </Typography>
@@ -65,5 +54,5 @@ export default function AttendancePunchCard() {
         </Grid>
       </CardActions>
     </Card>
-  )
+  );
 }

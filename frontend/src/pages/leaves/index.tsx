@@ -1,5 +1,5 @@
 import React from "react";
-import LeavesGridTable from "../@mui/LeavesGridTable";
+import LeavesGridTable from "../../@mui/LeavesGridTable";
 
 function Leaves() {
   return (

@@ -11,7 +11,7 @@ import {
 
 export default function EmployeeProfileCard() {
   return (
-    <Card sx={{ minWidth: 380 }} className="customProfileCard">
+    <Card sx={{ minWidth: 480 }} className="customProfileCard mb-4 pb-3" >
       <CardHeader
         action={
           <IconButton aria-label="settings" className="customTernaryTxtColor">

@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Grid, Typography, Toolbar, Box, AppBar } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu'
-import MailDialogBox from './MailDialogBox'
-import NotificationDialogBox from './NotificationDialogBox'
+import * as React from "react";
+import { Grid, Typography, Toolbar, Box, AppBar, Stack, Avatar, Chip } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import MailDialogBox from "./MailDialogBox";
+import NotificationDialogBox from "./NotificationDialogBox";
 
 export default function Topbar() {
   return (
@@ -18,12 +18,17 @@ export default function Topbar() {
 
           <Box>
             <Grid container gap={2}>
+             
               <MailDialogBox />
               <NotificationDialogBox />
+              <Stack direction="row" spacing={1}>
+                <Chip avatar={<Avatar alt="Natacha" src="/static/images/avatar/1.jpg" />} label="Avatar" variant="outlined" />
+              </Stack>
+
             </Grid>
           </Box>
         </Grid>
       </Toolbar>
     </AppBar>
-  )
+  );
 }

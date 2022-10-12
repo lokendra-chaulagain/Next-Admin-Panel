@@ -7,7 +7,7 @@ export default function OfficeExitPerformanceCard() {
     <Card variant="outlined" className="customCard">
       <CardContent>
         <Typography variant="h5" component="div" className="phc">
-          Office Entry Performance
+          Office Exit Performance
         </Typography>
         <AttendanceProgressBar />
       </CardContent>
