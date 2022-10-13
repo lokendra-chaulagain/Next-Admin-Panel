@@ -22,81 +22,51 @@ export default function AddEmployeeDetailDialog() {
 
       <Dialog open={open} onClose={handleClose}>
         <div className="customCard p-3 " style={{ overflow: "hidden" }}>
-          <h4>Add New Team MEmbers</h4>
+          <h4>Add New Team Members</h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
           <div className="row">
             <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
+              <label htmlFor="fullName" className="form-label mb-1">
+                Full Name
               </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="fullName" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
+              <label htmlFor="profilePicture" className="form-label mb-1">
+                Profile Picture
               </label>
 
-              <input type="file" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="file" className="form-control form-control-lg mb-2  border-0  rounded-0" id="profilePicture" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
           <div className="row">
             <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
+              <label htmlFor="employeeId" className="form-label mb-1">
+                Employee Id
               </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="employeeId" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
+              <label htmlFor="position" className="form-label mb-1">
+                Position
               </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
-              </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
-            </div>
-            <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
-              </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="position" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
           <div className="row">
             <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
+              <label htmlFor="contact" className="form-label mb-1">
+                Contact
               </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="contact" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
+              <label htmlFor="email" className="form-label mb-1">
+                Email Address
               </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
-              </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
-            </div>
-            <div className="col">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
-              </label>
-              <input type="email" className="form-control form-control-lg  border-0  rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="email" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 

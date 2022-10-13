@@ -3,13 +3,14 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import img from '../../public/6.jpg'
 import Image from 'next/image'
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined'
+import EditEmergencyContactDialog from './EditEmergencyContactDialog'
 
 const EmployeeEmergencyContactCard = () => {
   return (
     <Box className="customCard" p={2} pb={5}>
       <Grid container justifyContent="space-between">
         <Typography variant="h5">Emergency contact</Typography>
-        <EditOutlinedIcon className="cp" />
+       <EditEmergencyContactDialog/>
       </Grid>
       <Grid container>
         <Grid item  xs={6}>

@@ -5,6 +5,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import AddEmployeeDetailDialog from "./AddEmployeeDetailDialog";
 import EditEmployeeDetailDialog from "./EditEmployeeDetailDialog";
 import Link from "next/link";
+import DeleteAlert from "../components/DeleteAlert";
 
 export default function StaffDetailsGridTable() {
   return (
@@ -38,9 +39,7 @@ export default function StaffDetailsGridTable() {
                     </IconButton>
                   </Link>
                   <EditEmployeeDetailDialog />
-                  <IconButton aria-label="delete">
-                    <DeleteIcon fontSize="inherit" color="warning" />
-                  </IconButton>
+                  <DeleteAlert />
                 </div>
               </td>
             </tr>
@@ -59,9 +58,7 @@ export default function StaffDetailsGridTable() {
                     </IconButton>
                   </Link>
                   <EditEmployeeDetailDialog />
-                  <IconButton aria-label="delete">
-                    <DeleteIcon fontSize="inherit" color="warning" />
-                  </IconButton>
+                  <DeleteAlert />
                 </div>
               </td>
             </tr>
@@ -79,10 +76,10 @@ export default function StaffDetailsGridTable() {
                       <VisibilityIcon fontSize="inherit" color="warning" />
                     </IconButton>
                   </Link>
+
                   <EditEmployeeDetailDialog />
-                  <IconButton aria-label="delete">
-                    <DeleteIcon fontSize="inherit" color="warning" />
-                  </IconButton>
+
+                  <DeleteAlert />
                 </div>
               </td>
             </tr>

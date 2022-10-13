@@ -1,16 +1,15 @@
-import React from 'react'
-import { Avatar, Box, Button, Grid, Typography } from '@mui/material'
-import img from '../../public/6.jpg'
-import Image from 'next/image'
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined'
+import React from "react";
+import { Box, Grid, Typography } from "@mui/material";
+import EditEmployeePersonalInformationDialog from "./EditEmployeePersonalInformationDialog";
 
 const EmployeePersonalInformationCard = () => {
   return (
     <Box className="customCard" p={2} pb={5}>
       <Grid container justifyContent="space-between">
         <Typography variant="h5">Personal Information</Typography>
-        <EditOutlinedIcon className="cp" />
+        <EditEmployeePersonalInformationDialog />
       </Grid>
+
       <Grid container>
         <Grid item xs={6}>
           <Typography mt={1}>Citizen No.</Typography>
@@ -21,7 +20,6 @@ const EmployeePersonalInformationCard = () => {
           <Typography mt={1}>Bank Name</Typography>
           <Typography mt={1}>Bank account No.</Typography>
           <Typography mt={1}>PAN no</Typography>
-          
         </Grid>
         <Grid item xs={6}>
           <Typography mt={1}>123456789</Typography>
@@ -35,7 +33,7 @@ const EmployeePersonalInformationCard = () => {
         </Grid>
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default EmployeePersonalInformationCard
+export default EmployeePersonalInformationCard;

@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import img from "../../public/6.jpg";
-import Image from "next/image";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import { Dialog, IconButton } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
+import EditWorkingExperienceDialog from "./EditWorkingExperienceDialog";
 
 const datas = [
   {
@@ -47,6 +48,10 @@ const EmployeeExperienceCard = () => {
               date="2011 - present"
               iconStyle={{ background: "#16181d", color: "#bbc4cc" }}
               icon={<VisibilityIcon />}>
+            <div className="d-flex justify-content-end">
+            <EditWorkingExperienceDialog />
+            </div>
+
               <h6 className="vertical-timeline-element-title">{data.h1}</h6>
               <h6 className="vertical-timeline-element-subtitle">{data.h2}</h6>
               <p>{data.h3}</p>
