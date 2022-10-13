@@ -43,6 +43,13 @@ const navItems = [
     route: "/leaves",
   },
 
+  {
+    icon: <SettingsOutlinedIcon />,
+    label: "Email",
+    route: "/email",
+  },
+
+
   
   {
     icon: <ShoppingBagOutlinedIcon />,

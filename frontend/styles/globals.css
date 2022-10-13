@@ -88,6 +88,8 @@ a:hover {
   /*===========================  */
 }
 
+
+
 .custom-fs-11 {
   font-size: var(--fs-11);
 }
@@ -153,9 +155,6 @@ a:hover {
   color: var(--primary-text-color);
 }
 
-
-
-
 .customSecondaryTxtColor {
   color: var(--secondary-text-color);
 }
@@ -170,15 +169,19 @@ a:hover {
   color: var(--primary-text-color);
 }
 
-/* .customBorder {
- 
-    border: 1.5px solid var(--border-color);
-    
-} */
-/* .MuiOutlinedInput-root{
-    border-color: red;
-    color: green;
-} */
+
+
+.table_button {
+  border: 1px solid var(--border-color);
+  color: var(--primary-text-color);
+  background-color: var(--dark-color);
+}
+.table_button:hover {
+  background-color: var(--dark-color);
+}
+
+
+
 
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border: 1px solid var(--color-secondary);
@@ -354,4 +357,8 @@ a:hover {
 .MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
 .MuiDataGrid-root .MuiDataGrid-cell:focus {
   outline: none;
+}
+
+.custom_table_hover:hover {
+  background-color: #2d3741;
 }
