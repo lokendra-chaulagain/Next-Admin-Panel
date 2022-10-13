@@ -131,7 +131,7 @@ const rows = [
   },
 ];
 
-export default function StaffDetailsGridTable() {
+export default function PerformanceGridTable() {
   return (
     <Box sx={{ height: 400, width: "100%" }}>
       <AddEmployeeDetailDialog />

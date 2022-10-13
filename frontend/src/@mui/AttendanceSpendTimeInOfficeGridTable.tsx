@@ -20,7 +20,7 @@ const hours = [
   6.36, 8.45, 1, 0, 7.42, 2, 0, 2, 7.31, 2, 3, 3, 3, 3, 3, 0, 4, 4, 4, 0, 5, 5,5, 5, 5, 6, 6, 6, 6, 6, 7, 7,
 ]
 
-export default function AttendanceSpendTimeInOfficeGridTable() {
+export default function AttendanceGridTable1AttendanceGridTable1() {
   return (
     <TableContainer className="customCard mt-5 ">
       <Typography>

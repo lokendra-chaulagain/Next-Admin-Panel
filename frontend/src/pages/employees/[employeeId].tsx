@@ -3,7 +3,7 @@ import React from 'react'
 import EmployeeEducationCard from '../../@mui/EmployeeEducationCard'
 import EmployeeEmergencyContactCard from '../../@mui/EmployeeEmergencyContactCard'
 import EmployeeExperienceCard from '../../@mui/EmployeeExperienceCard'
-import EmployeeInfoCrd from '../../@mui/EmployeeInfoCrd'
+import EmployeeInfoCrd from '../../@mui/EmployeeInfoCard'
 import EmployeePersonalInformationCard from '../../@mui/EmployeePersonalInformationCard'
 
 function EmployeeId() {
