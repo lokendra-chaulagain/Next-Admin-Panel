@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StaffDetailsGridTable from "../../@mui/StaffDetailsGridTable";
 import AllEmployeesWrapper from "../../components/AllEmployeesWrapper";
+import axios from "axios";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { fetchAllEmployeesDetail } from "../../../redux/employeesDetail/employeesDetailSlice";
 
-function staffDetails() {
+function StaffDetails() {
+  const [employees, setEmployees] = useState([]);
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      const response = await axios.get("http://localhost:4000/api/employeeDetail/getAll");
+      setEmployees(response.data);
+    };
+    fetchEmployees();
+  }, []);
+
+  const dispatch = useAppDispatch();
+  const data = useAppSelector((state: any) => state.employeesDetail);
+
+  React.useEffect(() => {
+    dispatch(fetchAllEmployeesDetail());
+  }, [dispatch]);
+
+  console.log(data);
+
   return (
     <div>
       <StaffDetailsGridTable />
@@ -11,4 +32,4 @@ function staffDetails() {
   );
 }
 
-export default staffDetails;
+export default StaffDetails;

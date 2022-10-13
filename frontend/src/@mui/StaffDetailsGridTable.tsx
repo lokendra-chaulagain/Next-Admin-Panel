@@ -1,145 +1,94 @@
 import * as React from "react";
-import { Box, IconButton, Grid, Stack } from "@mui/material";
-import { DataGrid, GridColDef, GridApi, GridCellValue } from "@mui/x-data-grid";
+import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import AddEmployeeDetailDialog from "./AddEmployeeDetailDialog";
 import EditEmployeeDetailDialog from "./EditEmployeeDetailDialog";
 import Link from "next/link";
 
-const columns: GridColDef[] = [
-  { field: "id", headerName: "SN", width: 20 },
-  {
-    field: "fullName",
-    headerName: "Full Name",
-    width: 230,
-    
-  },
-
-  {
-    field: "empID",
-    headerName: "ID",
-    type: "string",
-    width: 100,
-  },
-
-  {
-    field: "position",
-    headerName: "Position",
-    type: "string",
-    width: 200,
-  },
-
-  {
-    field: "age",
-    headerName: "Age (Y)",
-    type: "string",
-    width: 100,
-  },
-
-  {
-    field: "contact",
-    headerName: "Contact",
-    type: "string",
-    width: 120,
-  },
-
-  {
-    field: "email",
-    headerName: "Email",
-    type: "string",
-    width: 250,
-  },
-
-  {
-    field: "description",
-    headerName: "Description",
-    type: "string",
-    width: 200,
-  },
-
-  {
-    field: "actions",
-    headerName: "Actions",
-    type: "string",
-    width: 220,
-
-    renderCell: (params) => {
-      const handleEditClick = (e: { stopPropagation: () => void }) => {
-        e.stopPropagation(); // don't select this row after clicking
-
-        const api: GridApi = params.api;
-        const thisRow: Record<string, GridCellValue> = {};
-
-        api
-          .getAllColumns()
-          .filter((c) => c.field !== "__check__" && !!c)
-          .forEach((c) => (thisRow[c.field] = params.getValue(params.id, c.field)));
-
-        return alert(JSON.stringify(thisRow, null, 4));
-      };
-
-      // return <Button onClick={onClick}>Click</Button>;
-      return (
-        <Stack direction="row">
-          <Link href={`staffDetails/1`}>
-            <IconButton aria-label="delete" size="large">
-              <VisibilityIcon fontSize="inherit" color="warning" />
-            </IconButton>
-          </Link>
-          <EditEmployeeDetailDialog onClick={handleEditClick} />
-          <IconButton aria-label="delete" size="large">
-            <DeleteIcon fontSize="inherit" color="warning" />
-          </IconButton>
-        </Stack>
-      );
-    },
-  },
-];
-
-const rows = [
-  {
-    id: 1,
-    fullName: "fullName",
-    age: 22,
-    empID: 763,
-    position: "WebApp Developer",
-    contact: "9864755749",
-    email: "lokendrachaulagain803@gmail.com",
-    description: "Lorem Ipsum is simply dummy",
-  },
-
-  {
-    id: 1,
-    fullName: "fullName",
-    age: 22,
-    empID: 763,
-    position: "WebApp Developer",
-    contact: "9864755749",
-    email: "lokendrachaulagain803@gmail.com",
-    description: "Lorem Ipsum is simply dummy",
-  },
-
-  {
-    id: 1,
-    fullName: "fullName",
-    age: 22,
-    empID: 763,
-    position: "WebApp Developer",
-    contact: "9864755749",
-    email: "lokendrachaulagain803@gmail.com",
-    description: "Lorem Ipsum is simply dummy",
-  },
-];
-
 export default function StaffDetailsGridTable() {
   return (
-    <Box sx={{ height: 400, width: "100%" }}>
-      <div className="mb-2">
-        <AddEmployeeDetailDialog />
-      </div>
+    <>
+      <AddEmployeeDetailDialog />
 
-      <DataGrid className="customCard " rows={rows} columns={columns} pageSize={5} rowsPerPageOptions={[5]} disableSelectionOnClick experimentalFeatures={{ newEditingApi: true }} />
-    </Box>
+      <div className="customCard mt-2 ">
+        <table className="table  ">
+          <thead>
+            <tr className="customPrimaryTxtColor">
+              <th scope="col">S.N</th>
+              <th scope="col">Full Name</th>
+              <th scope="col">Employee ID</th>
+              <th scope="col">Position</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="customPrimaryTxtColor custom_table_hover ">
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>
+                <div className="d-flex ">
+                  <Link href={`staffDetails/1`}>
+                    <IconButton aria-label="delete">
+                      <VisibilityIcon fontSize="inherit" color="warning" />
+                    </IconButton>
+                  </Link>
+                  <EditEmployeeDetailDialog />
+                  <IconButton aria-label="delete">
+                    <DeleteIcon fontSize="inherit" color="warning" />
+                  </IconButton>
+                </div>
+              </td>
+            </tr>
+
+            <tr className="customPrimaryTxtColor custom_table_hover ">
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>
+                <div className="d-flex ">
+                  <Link href={`staffDetails/1`}>
+                    <IconButton aria-label="delete">
+                      <VisibilityIcon fontSize="inherit" color="warning" />
+                    </IconButton>
+                  </Link>
+                  <EditEmployeeDetailDialog />
+                  <IconButton aria-label="delete">
+                    <DeleteIcon fontSize="inherit" color="warning" />
+                  </IconButton>
+                </div>
+              </td>
+            </tr>
+
+            <tr className="customPrimaryTxtColor custom_table_hover ">
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>
+                <div className="d-flex ">
+                  <Link href={`staffDetails/1`}>
+                    <IconButton aria-label="delete">
+                      <VisibilityIcon fontSize="inherit" color="warning" />
+                    </IconButton>
+                  </Link>
+                  <EditEmployeeDetailDialog />
+                  <IconButton aria-label="delete">
+                    <DeleteIcon fontSize="inherit" color="warning" />
+                  </IconButton>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }

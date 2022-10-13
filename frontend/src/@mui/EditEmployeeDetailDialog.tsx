@@ -31,7 +31,7 @@ export default function EditEmployeeDetailDialog() {
         Edit
       </Button> */}
 
-      <IconButton aria-label="delete" size="large">
+      <IconButton aria-label="delete" >
         <EditIcon fontSize="inherit" color='primary' />
       </IconButton>
 

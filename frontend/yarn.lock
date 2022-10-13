@@ -606,10 +606,10 @@
   dependencies:
     "remove-accents" "0.4.2"
 
-"@tanstack/query-core@4.3.1":
-  "integrity" "sha512-NrtvJYVxgO2vdXyogchORW2wDh81nHjnH8n51OvaLFilC59DE8hyMzrHmKI4J0MKx8wZvROChVHHXpbBGstR8A=="
-  "resolved" "https://registry.npmjs.org/@tanstack/query-core/-/query-core-4.3.1.tgz"
-  "version" "4.3.1"
+"@tanstack/query-core@4.10.3":
+  "integrity" "sha512-+ME02sUmBfx3Pjd+0XtEthK8/4rVMD2jcxvnW9DSgFONpKtpjzfRzjY4ykzpDw1QEo2eoPvl7NS8J5mNI199aA=="
+  "resolved" "https://registry.npmjs.org/@tanstack/query-core/-/query-core-4.10.3.tgz"
+  "version" "4.10.3"
 
 "@tanstack/react-query-devtools@^4.3.1":
   "integrity" "sha512-amcoHMp5Ea3md46KVys2BtVJVuv506jF8Y+FrQQRsYjTsijS3Lj913SUg7QlKKiYY0XnFKqdmkJJXpgkbB+BGw=="
@@ -619,12 +619,12 @@
     "@tanstack/match-sorter-utils" "^8.1.1"
     "use-sync-external-store" "^1.2.0"
 
-"@tanstack/react-query@^4.3.1", "@tanstack/react-query@4.3.1":
-  "integrity" "sha512-rVtXi5yRbhK9EGrlrnIsLNSW+bNpu8OuTnSjf5SNau2L6N+0UXrL911rtkIgF908zPKwaOoAqW/dM7d+ICp+Dg=="
-  "resolved" "https://registry.npmjs.org/@tanstack/react-query/-/react-query-4.3.1.tgz"
-  "version" "4.3.1"
+"@tanstack/react-query@^4.10.3", "@tanstack/react-query@4.3.1":
+  "integrity" "sha512-4OEJjkcsCTmG3ui7RjsVzsXerWQvInTe95CBKFyOV/GchMUlNztoFnnYmlMhX7hLUqJMhbG9l7M507V7+xU8Hw=="
+  "resolved" "https://registry.npmjs.org/@tanstack/react-query/-/react-query-4.10.3.tgz"
+  "version" "4.10.3"
   dependencies:
-    "@tanstack/query-core" "4.3.1"
+    "@tanstack/query-core" "4.10.3"
     "use-sync-external-store" "^1.2.0"
 
 "@types/hoist-non-react-statics@^3.3.1":
