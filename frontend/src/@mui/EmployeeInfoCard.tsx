@@ -1,15 +1,15 @@
-import React from 'react'
-import { Avatar, Box, Button, Grid, Typography } from '@mui/material'
-import img from '../../public/6.jpg'
-import Image from 'next/image'
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined'
+import React from "react";
+import { Avatar, Box, Button, Grid, Typography } from "@mui/material";
+import img from "../../public/6.jpg";
+import Image from "next/image";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 
-const EmployeeInfoCrd = () => {
+const EmployeeInfoCard = () => {
   return (
     <Grid container className="customCard" p={2}>
       <Grid item container xs={6} gap={2}>
         <Grid>
-          <Avatar sx={{ width: 150, height: 150 }}>
+          <Avatar sx={{ width: "128px", height: "128px" }}>
             <Image src={img} alt="loki" />
           </Avatar>
         </Grid>
@@ -28,20 +28,12 @@ const EmployeeInfoCrd = () => {
           <Typography mt={1}>
             Date of Join :<span>1st Jan 2013</span>
           </Typography>
-          <Box mt={2}>
-            <Button variant="contained">Send Mail</Button>
-          </Box>
         </Grid>
       </Grid>
 
       {/* Right side */}
       <Grid item xs={6}>
-        <Grid
-          container
-          alignContent="center"
-          justifyContent="space-between "
-          className="cp"
-        >
+        <Grid container alignContent="center" justifyContent="space-between " className="cp">
           <Typography mt={1}>
             Phone : <span>9864755749</span>
           </Typography>
@@ -61,11 +53,15 @@ const EmployeeInfoCrd = () => {
           Secondary Address: <span>Tikapur Kailali</span>
         </Typography>
         <Typography mt={1}>
-          Gender : <span>Male</span>{' '}
+          Gender : <span>Male</span>{" "}
         </Typography>
+
+        <Box mt={2}>
+          <Button variant="contained">Send Mail</Button>
+        </Box>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
 
-export default EmployeeInfoCrd
+export default EmployeeInfoCard;

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Box, IconButton, Grid, Stack } from "@mui/material";
 import { DataGrid, GridColDef, GridApi, GridCellValue } from "@mui/x-data-grid";
 import DeleteIcon from "@mui/icons-material/Delete";
-import VisibilityIcon from "@mui/icons-material/Visibility";
+
 import AddEmployeeDetailDialog from "./AddEmployeeDetailDialog";
 import EditEmployeeDetailDialog from "./EditEmployeeDetailDialog";
 import Link from "next/link";
@@ -13,7 +13,6 @@ const columns: GridColDef[] = [
     field: "fullName",
     headerName: "Full Name",
     width: 230,
-    
   },
 
   {
@@ -84,7 +83,7 @@ const columns: GridColDef[] = [
         <Stack direction="row">
           <Link href={`staffDetails/1`}>
             <IconButton aria-label="delete" size="large">
-              <VisibilityIcon fontSize="inherit" color="warning" />
+              <DeleteIcon fontSize="inherit" color="warning" />
             </IconButton>
           </Link>
           <EditEmployeeDetailDialog onClick={handleEditClick} />
@@ -132,14 +131,12 @@ const rows = [
   },
 ];
 
-export default function StaffDetailsGridTable() {
+export default function PerformanceGridTable() {
   return (
     <Box sx={{ height: 400, width: "100%" }}>
-      <div className="mb-2">
-        <AddEmployeeDetailDialog />
-      </div>
+      <AddEmployeeDetailDialog />
 
-      <DataGrid className="customCard " rows={rows} columns={columns} pageSize={5} rowsPerPageOptions={[5]} disableSelectionOnClick experimentalFeatures={{ newEditingApi: true }} />
+      <DataGrid className="customCard" rows={rows} columns={columns} pageSize={5} rowsPerPageOptions={[5]} disableSelectionOnClick experimentalFeatures={{ newEditingApi: true }} />
     </Box>
   );
 }
