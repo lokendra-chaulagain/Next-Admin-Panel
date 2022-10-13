@@ -5,7 +5,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import LeftAppBar from "../components/LeftBar";
 import Topbar from "../components/Topbar";
 import { Provider } from "react-redux";
-import { store } from "../../app/store";
+import { store } from "../../redux/store";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 

@@ -11,17 +11,7 @@ const employeeDetailSchema = new mongoose.Schema({
     required: true,
   },
 
-  empId: {
-    type: String,
-    required: "true",
-  },
-
   position: {
-    type: String,
-    required: "true",
-  },
-
-  age: {
     type: String,
     required: "true",
   },
@@ -41,15 +31,7 @@ const employeeDetailSchema = new mongoose.Schema({
     required: "true",
   },
 
-  daysAtCompany: {
-    type: String,
-    required: "true",
-  },
-
-  description: {
-    type: String,
-    required: "true",
-  },
+  
 });
 
 export default mongoose.model("EmployeeDetail", employeeDetailSchema);
