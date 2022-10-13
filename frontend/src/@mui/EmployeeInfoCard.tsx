@@ -3,6 +3,7 @@ import { Avatar, Box, Button, Grid, Typography } from "@mui/material";
 import img from "../../public/6.jpg";
 import Image from "next/image";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import SinglePersonEmailSendModal from "../components/SinglePersonEmailSendModal";
 
 const EmployeeInfoCard = () => {
   return (
@@ -56,9 +57,12 @@ const EmployeeInfoCard = () => {
           Gender : <span>Male</span>{" "}
         </Typography>
 
-        <Box mt={2}>
-          <Button variant="contained">Send Mail</Button>
-        </Box>
+        <div className="mt-3">
+        <SinglePersonEmailSendModal/>
+
+        </div>
+
+       
       </Grid>
     </Grid>
   );

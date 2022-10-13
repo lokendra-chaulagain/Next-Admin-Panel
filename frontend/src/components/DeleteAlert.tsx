@@ -1,74 +1,34 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import Paper, { PaperProps } from "@mui/material/Paper";
-import Draggable from "react-draggable";
+import { Button, IconButton } from "@mui/material";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import ButtonGroup from "@mui/material/ButtonGroup";
-
-import Typography from "@mui/material/Typography";
-
-function PaperComponent(props: PaperProps) {
-  return (
-    <Draggable
-      handle="#draggable-dialog-title"
-      cancel={'[class*="MuiDialogContent-root"]'}
-    >
-      <Paper {...props} />
-    </Draggable>
-  );
-}
+import DeleteIcon from "@mui/icons-material/Delete";
 
 export default function DeleteAlert() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
-    <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open draggable dialog
-      </Button>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        PaperComponent={PaperComponent}
-        aria-labelledby="draggable-dialog-title"
-      >
-        <DialogTitle style={{ cursor: "move" }} id="draggable-dialog-title">
-          <RiDeleteBin6Line />
-        </DialogTitle>
-        <DialogContent>
-          <Typography variant="h5" gutterBottom>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </Typography>
+    <>
+      <IconButton aria-label="delete" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <DeleteIcon fontSize="inherit" color="warning" />
+      </IconButton>
 
-          <Typography variant="body2" gutterBottom>
-            Do you really want to delete these records? Your view this in
-            your list anymore if you delete!
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-          <ButtonGroup
-            variant="contained"
-            aria-label="outlined primary button group"
-          >
-            <Button>No, Keep It</Button>
-            <Button>Yes, Delete It</Button>
-          </ButtonGroup>
-        </DialogActions>
-      </Dialog>
-    </div>
+      <div className="modal fade " id="exampleModal" tab-index="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog ">
+        <div className="modal-content p-2 rounded-1 " style={{ backgroundColor: "#16181d", color: "#bbc4cc", border: "1px solid #2d3741 " }}>
+            <div className="modal-body">
+              <h3 className="text-center">Are you sure ?</h3>
+            </div>
+            <div className="d-flex justify-content-end gap-3 mt-3">
+              <Button className="table_button px-2" size="small" data-bs-dismiss="modal">
+                Cancell
+              </Button>
+
+              <Button className="table_button " size="small">
+                Yes Delete
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

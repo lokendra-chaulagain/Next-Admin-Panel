@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Dialog, Button, IconButton } from "@mui/material";
-import EditIcon from "@mui/icons-material/Edit";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 
-export default function EditEmployeeDetailDialog() {
+export default function EditEmergencyContactDialog() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -17,13 +17,13 @@ export default function EditEmployeeDetailDialog() {
     <>
       <div>
         <IconButton aria-label="edit " onClick={handleClickOpen}>
-          <EditIcon fontSize="inherit" color="primary" />
+          <EditOutlinedIcon fontSize="inherit" color="primary" />
         </IconButton>
       </div>
 
       <Dialog open={open} onClose={handleClose}>
         <div className="customCard p-3 " style={{ overflow: "hidden" }}>
-          <h4>Edit Team Members Data</h4>
+          <h4>Edit Emergency Contact</h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
           <div className="row">
             <div className="col">
@@ -32,40 +32,43 @@ export default function EditEmployeeDetailDialog() {
               </label>
               <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="fullName" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
-            <div className="col">
-              <label htmlFor="profilePicture" className="form-label mb-1">
-                Profile Picture
-              </label>
-
-              <input type="file" className="form-control form-control-lg mb-2   border-0  rounded-0" id="profilePicture" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
-            </div>
           </div>
 
           <div className="row">
             <div className="col">
-              <label htmlFor="employeeId" className="form-label ">
-                Employee Id
+              <label htmlFor="contact" className="form-label mb-1">
+                Relationship
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="employeeId" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="contact" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="position" className="form-label mb-1">
-                Position
+              <label htmlFor="email" className="form-label mb-1">
+                Phone
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="position" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="email" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+            </div>
+          </div>
+          <hr />
+
+          <div className="row">
+            <div className="col">
+              <label htmlFor="fullName" className="form-label mb-1">
+                Full Name
+              </label>
+              <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="fullName" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
           <div className="row">
             <div className="col">
               <label htmlFor="contact" className="form-label mb-1">
-                Contact
+                Relationship
               </label>
               <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="contact" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
               <label htmlFor="email" className="form-label mb-1">
-                Email Address
+                Phone
               </label>
               <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="email" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
