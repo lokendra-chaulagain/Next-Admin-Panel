@@ -17,9 +17,15 @@ const EmployeeId = () => {
         </div>
       </div>
 
-      <EmployeeEducationCard />
-      <EmployeeEmergencyContactCard />
-      <EmployeeExperienceCard />
+      <div className="mt-4">
+        <EmployeeEmergencyContactCard />
+      </div>
+      <div className="mt-4">
+        <EmployeeEducationCard />
+      </div>
+      <div className="mt-4">
+        <EmployeeExperienceCard />
+      </div>
     </div>
   );
 };
