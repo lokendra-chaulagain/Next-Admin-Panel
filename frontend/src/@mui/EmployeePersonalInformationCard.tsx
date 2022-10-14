@@ -1,38 +1,33 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import EditEmployeePersonalInformationDialog from "./EditEmployeePersonalInformationDialog";
 
 const EmployeePersonalInformationCard = () => {
   return (
-    <Box className="customCard" p={2} pb={5}>
-      <Grid container justifyContent="space-between">
-        <Typography variant="h5">Personal Information</Typography>
+    <div className="row customCard py-3">
+      <div className="d-flex justify-content-between mb-2">
+        <h4>Personal Information</h4>
         <EditEmployeePersonalInformationDialog />
-      </Grid>
-
-      <Grid container>
-        <Grid item xs={6}>
-          <Typography mt={1}>Citizen No.</Typography>
-          <Typography mt={1}>Nationality</Typography>
-          <Typography mt={1}>Material Status</Typography>
-          <Typography mt={1}>Telephone</Typography>
-          <Typography mt={1}>Phone</Typography>
-          <Typography mt={1}>Bank Name</Typography>
-          <Typography mt={1}>Bank account No.</Typography>
-          <Typography mt={1}>PAN no</Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography mt={1}>123456789</Typography>
-          <Typography mt={1}>Nepali</Typography>
-          <Typography mt={1}>Married</Typography>
-          <Typography mt={1}>091560245</Typography>
-          <Typography mt={1}>9864755749</Typography>
-          <Typography mt={1}>Nabil Bank</Typography>
-          <Typography mt={1}>162548946454946454</Typography>
-          <Typography mt={1}>735463475NPL</Typography>
-        </Grid>
-      </Grid>
-    </Box>
+      </div>
+      <div className="col">
+        <Typography className="my-2"> Citizenship Number </Typography>
+        <Typography className="my-2"> Nationality </Typography>
+        <Typography className="my-2"> Material Status </Typography>
+        <Typography className="my-2"> Telephone </Typography>
+        <Typography className="my-2"> Phone</Typography>
+        <Typography className="my-2"> Bank Name </Typography>
+        <Typography className="my-2"> PAN Number</Typography>
+      </div>
+      <div className="col">
+        <Typography className="my-2"> 09494746394 </Typography>
+        <Typography className="my-2"> rjhe74t46 </Typography>
+        <Typography className="my-2">484474gh746</Typography>
+        <Typography className="my-2"> 4i4u8y4hfdyr </Typography>
+        <Typography className="my-2"> 4uu4y78486454 </Typography>
+        <Typography className="my-2"> 8746g464</Typography>
+        <Typography className="my-2">jjdhfff </Typography>
+      </div>
+    </div>
   );
 };
 

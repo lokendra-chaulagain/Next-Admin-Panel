@@ -1,10 +1,10 @@
 import React from "react";
-import LeavesGridTable from "../../@mui/LeavesGridTable";
+import LeaveTable from "../../components/LeaveTable";
 
 function Leaves() {
   return (
     <div>
-      <LeavesGridTable />
+      <LeaveTable />
     </div>
   );
 }

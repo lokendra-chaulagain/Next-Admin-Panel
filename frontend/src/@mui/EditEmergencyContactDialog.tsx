@@ -1,18 +1,17 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { Dialog, Button, IconButton } from "@mui/material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 
 export default function EditEmergencyContactDialog() {
   const [open, setOpen] = React.useState(false);
-
   const handleClickOpen = () => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
 
+ 
   return (
     <>
       <div>

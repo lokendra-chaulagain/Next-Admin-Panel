@@ -17,13 +17,13 @@ const EmployeeId = () => {
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="row mt-4">
         <EmployeeEmergencyContactCard />
       </div>
-      <div className="mt-4">
+      <div className="row mt-4">
         <EmployeeEducationCard />
       </div>
-      <div className="mt-4">
+      <div className="row mt-4">
         <EmployeeExperienceCard />
       </div>
     </div>

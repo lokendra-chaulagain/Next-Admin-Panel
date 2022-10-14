@@ -1,17 +1,39 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { Dialog, Button, IconButton } from "@mui/material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 
 export default function EditEmployeePersonalInformationDialog() {
   const [open, setOpen] = React.useState(false);
-
   const handleClickOpen = () => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
+
+  const [personalInformation, setPersonalInformation] = useState({
+    citizenshipNumber: "",
+    nationality: "",
+    materialStatus: "",
+    telephone: "",
+    phoneNumber: "",
+    bankName: "",
+    bankAccountNumber: "",
+    panNumber: "",
+  });
+
+  const handleInputChange = (e: any) => {
+    setPersonalInformation({
+      ...personalInformation,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleFormSubmit = (e: any) => {
+    e.preventDefault();
+    console.log("Personal Information form submitted");
+  };
+  console.log(personalInformation);
 
   return (
     <>
@@ -22,67 +44,67 @@ export default function EditEmployeePersonalInformationDialog() {
       </div>
 
       <Dialog open={open} onClose={handleClose}>
-        <div className="customCard p-3 " style={{ overflow: "hidden" }}>
+        <form onSubmit={handleFormSubmit} className="customCard p-3 " style={{ overflow: "hidden" }}>
           <h4>Edit Personal Information</h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
           <div className="row">
             <div className="col">
-              <label htmlFor="fullName" className="form-label mb-1">
-                Citizen Number
+              <label htmlFor="citizenshipNumber" className="form-label mb-1">
+                Citizenship Number
               </label>
-              <input type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="fullName" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="citizenshipNumber" value={personalInformation.citizenshipNumber} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="citizenshipNumber" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="profilePicture" className="form-label mb-1">
+              <label htmlFor="nationality" className="form-label mb-1">
                 Nationality
               </label>
 
-              <input type="text" className="form-control form-control-lg mb-2   border-0  rounded-0" id="profilePicture" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="nationality" value={personalInformation.nationality} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2   border-0  rounded-0" id="nationality" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
           <div className="row">
             <div className="col">
-              <label htmlFor="employeeId" className="form-label ">
+              <label htmlFor="materialStatus" className="form-label mb-1">
                 Material status
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="employeeId" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="materialStatus" value={personalInformation.materialStatus} onChange={handleInputChange} type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="materialStatus" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="position" className="form-label mb-1">
+              <label htmlFor="telephone" className="form-label mb-1">
                 Telephone
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="position" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="telephone" value={personalInformation.telephone} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2   border-0  rounded-0" id="telephone" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
           <div className="row">
             <div className="col">
-              <label htmlFor="contact" className="form-label mb-1">
+              <label htmlFor="phoneNumber" className="form-label mb-1">
                 Phone Number
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="contact" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="phoneNumber" value={personalInformation.phoneNumber} onChange={handleInputChange} type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="phoneNumber" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="email" className="form-label mb-1">
+              <label htmlFor="bankName" className="form-label mb-1">
                 Bank Name
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="email" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="bankName" value={personalInformation.bankName} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2   border-0  rounded-0" id="bankName" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
           <div className="row">
             <div className="col">
-              <label htmlFor="contact" className="form-label mb-1">
+              <label htmlFor="bankAccountNumber" className="form-label mb-1">
                 Bank Account No
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="contact" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="bankAccountNumber" value={personalInformation.bankAccountNumber} onChange={handleInputChange} type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="bankAccountNumber" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
-              <label htmlFor="email" className="form-label mb-1">
-                Bank Name
+              <label htmlFor="panNumber" className="form-label mb-1">
+                PAN Number
               </label>
-              <input type="email" className="form-control form-control-lg mb-2   border-0  rounded-0" id="email" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="panNumber" value={personalInformation.panNumber} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2   border-0  rounded-0" id="panNumber" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
@@ -90,11 +112,11 @@ export default function EditEmployeePersonalInformationDialog() {
             <Button className="customCard px-3" onClick={handleClose}>
               Cancel
             </Button>
-            <Button className="customCard px-4" onClick={handleClose}>
+            <Button type="submit" className="customCard px-4" onClick={handleClose}>
               Save
             </Button>
           </div>
-        </div>
+        </form>
       </Dialog>
     </>
   );

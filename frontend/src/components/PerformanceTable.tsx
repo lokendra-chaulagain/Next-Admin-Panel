@@ -8,7 +8,7 @@ import DeleteAlert from "../components/DeleteAlert";
 import AddEmployeeDetailDialog from "../@mui/AddEmployeeDetailDialog";
 import EditEmployeeDetailDialog from "../@mui/EditEmployeeDetailDialog";
 
-export default function AttendanceTable() {
+export default function PerformanceTable() {
   return (
     <>
       <AddEmployeeDetailDialog />

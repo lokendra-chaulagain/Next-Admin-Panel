@@ -6,7 +6,7 @@ const employeeDetailSchema = new mongoose.Schema({
     required: "true",
   },
 
-  profileImg: {
+  profilePicture: {
     type: String,
     required: true,
   },
@@ -16,7 +16,7 @@ const employeeDetailSchema = new mongoose.Schema({
     required: "true",
   },
 
-  contact: {
+  contactNumber: {
     type: String,
     required: "true",
   },

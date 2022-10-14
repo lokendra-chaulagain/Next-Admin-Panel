@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import StaffDetailsGridTable from "../../@mui/StaffDetailsGridTable";
 import AllEmployeesWrapper from "../../components/AllEmployeesWrapper";
-import axios from "axios";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { fetchAllEmployeesDetail } from "../../../redux/employeesDetail/employeesDetailSlice";
+import axios from "axios";
 
 function StaffDetails() {
   const [employees, setEmployees] = useState([]);

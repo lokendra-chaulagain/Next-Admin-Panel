@@ -1,11 +1,11 @@
 import React from "react";
-import PerformanceGridTable from "../@mui/PerformanceGridTable";
+import PerformanceTable from "../components/PerformanceTable";
 import PerformanceWrapper from "../components/PerformanceWrapper";
 
 function performance() {
   return (
     <div>
-      <PerformanceGridTable/>
+      <PerformanceTable />
       <PerformanceWrapper />
     </div>
   );
