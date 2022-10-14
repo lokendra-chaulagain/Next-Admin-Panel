@@ -1,70 +1,41 @@
 import React from "react";
-import { Avatar, Box, Button, Grid, Typography } from "@mui/material";
+import { Avatar, Typography } from "@mui/material";
 import img from "../../public/6.jpg";
 import Image from "next/image";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import SinglePersonEmailSendModal from "../components/SinglePersonEmailSendModal";
+import EditEmployeeInformationDialog from "./EditEmployeeInformationDialog";
 
 const EmployeeInfoCard = () => {
   return (
-    <Grid container className="customCard" p={2}>
-      <Grid item container xs={6} gap={2}>
-        <Grid>
-          <Avatar sx={{ width: "128px", height: "128px" }}>
-            <Image src={img} alt="loki" />
-          </Avatar>
-        </Grid>
-
-        <Grid gap={5}>
-          <Grid component="h2">Lokendra Chaulagain</Grid>
-          <Typography mt={1}>
-            Team: <span>Developer</span>
-          </Typography>
-          <Typography mt={1}>
-            Position: <span>WebApp Developer</span>
-          </Typography>
-          <Typography mt={1}>
-            Employee ID : <span>095343474</span>
-          </Typography>
-          <Typography mt={1}>
-            Date of Join :<span>1st Jan 2013</span>
-          </Typography>
-        </Grid>
-      </Grid>
-
-      {/* Right side */}
-      <Grid item xs={6}>
-        <Grid container alignContent="center" justifyContent="space-between " className="cp">
-          <Typography mt={1}>
-            Phone : <span>9864755749</span>
-          </Typography>
-          <EditOutlinedIcon />
-        </Grid>
-
-        <Typography mt={1}>
-          Email : <span>lokendrachaulagain803@gmail.com</span>
-        </Typography>
-        <Typography mt={1}>
-          birthday : <span>june 27 2000</span>
-        </Typography>
-        <Typography mt={1}>
-          primary Address : <span> Kathmandu Nepal</span>
-        </Typography>
-        <Typography mt={1}>
-          Secondary Address: <span>Tikapur Kailali</span>
-        </Typography>
-        <Typography mt={1}>
-          Gender : <span>Male</span>{" "}
-        </Typography>
-
+    <div className=" row customCard py-3">
+      <div className="d-flex justify-content-between mb-2">
+        <h4>Employee Information</h4>
+        {/* <EditOutlinedIcon /> */}
+        <EditEmployeeInformationDialog/>
+      </div>
+      <div className="col">
+        <Avatar sx={{ width: "128px", height: "128px" }}>
+          <Image src={img} alt="loki" />
+        </Avatar>
+        <h4 className="my-2">Lokendra Chaulagain</h4>
+        <Typography className="my-2"> Team : Developer </Typography>
+        <Typography className="my-2"> Position : WebApp developer </Typography>
+        <Typography className="my-2"> Employee ID: 74993745 </Typography>
+      </div>
+      <div className="col">
+        <Typography className="my-2"> Date of Join : 1st Jan 2013 </Typography>
+        <Typography className="my-2"> Phone : Developer </Typography>
+        <Typography className="my-2"> Email : Developer </Typography>
+        <Typography className="my-2"> Birthday : Developer </Typography>
+        <Typography className="my-2"> Primary Address : Developer </Typography>
+        <Typography className="my-2"> Secondary Address: Developer </Typography>
+        <Typography className="my-2"> Gender : Developer </Typography>
         <div className="mt-3">
-        <SinglePersonEmailSendModal/>
-
+          <SinglePersonEmailSendModal />
         </div>
-
-       
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 };
 

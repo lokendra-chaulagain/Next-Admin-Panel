@@ -1,14 +1,12 @@
 import React from "react";
-
-import AttendanceGridTable1 from "../../@mui/AttendanceGridTable1";
 import AttendancePunchCard from "../../@mui/AttendancePunchCard";
+import AttendanceTable from "../../components/AttendanceTable";
 
 function Attendance() {
   return (
     <div>
-      <AttendancePunchCard/>
-      <AttendanceGridTable1 />
-      
+      <AttendanceTable />
+      <AttendancePunchCard />
     </div>
   );
 }

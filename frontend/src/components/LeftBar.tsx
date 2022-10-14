@@ -24,7 +24,6 @@ const navItems = [
     route: "/staffDetails",
   },
 
-
   {
     icon: <SettingsOutlinedIcon />,
     label: "Attendance",
@@ -47,14 +46,6 @@ const navItems = [
     icon: <SettingsOutlinedIcon />,
     label: "Email",
     route: "/email",
-  },
-
-
-  
-  {
-    icon: <ShoppingBagOutlinedIcon />,
-    label: "Product",
-    route: "/product",
   },
 ];
 
