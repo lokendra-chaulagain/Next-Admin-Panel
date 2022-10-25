@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { attendanceReducer } from "./attendance/attendanceSlice";
 import { employeeReducer } from "./employee/employeeSlice";
-// frontend\redux\employee\employeeSlice.ts
 
 export const store = configureStore({
   reducer: {
-   employeeStore: employeeReducer,
+    employeeStore: employeeReducer,
+    attendanceStore: attendanceReducer,
   },
 });
 
