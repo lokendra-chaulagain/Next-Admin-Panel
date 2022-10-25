@@ -1,24 +1,26 @@
 import Attendance from "../models/Attendance.js";
 
-//add
-const addAttendanceStatus = async (req, res, next) => {
+const takeEntryAttendance = async (req, res, next) => {
   try {
-    const attendanceStatus = new Attendance(req.body);
-    const savedAttendanceStatus = await attendanceStatus.save();
-    res.status(200).json(savedAttendanceStatus);
+    const newAttendance = new Attendance(req.body);
+    const savedAttendance = await newAttendance.save();
+    res.status(200).json(savedAttendance);
   } catch (error) {
     console.log(error);
   }
 };
 
-//get
-const getAllEmployeeAttendance = async (req, res, next) => {
+const takeExitAttendance = async (req, res) => {
   try {
-    const allEmployeeAttendance = await Attendance.find();
-    res.status(200).json(allEmployeeAttendance);
+    const updatedAttendance = await Attendance.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.status(200).json(updatedAttendance);
   } catch (error) {
     console.log(error);
   }
 };
 
-export { addAttendanceStatus,getAllEmployeeAttendance };
+// getAttendance bu userId
+
+export { takeEntryAttendance, takeExitAttendance };

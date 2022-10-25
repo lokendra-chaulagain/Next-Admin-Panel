@@ -2,7 +2,6 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import GridViewIcon from "@mui/icons-material/GridView";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -20,8 +19,8 @@ const navItems = [
 
   {
     icon: <SettingsOutlinedIcon />,
-    label: "Staff Details",
-    route: "/staffDetails",
+    label: "Employees",
+    route: "/employee",
   },
 
   {

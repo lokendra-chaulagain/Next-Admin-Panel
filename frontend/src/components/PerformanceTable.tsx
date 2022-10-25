@@ -5,8 +5,8 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 
 import Link from "next/link";
 import DeleteAlert from "../components/DeleteAlert";
-import AddEmployeeDetailDialog from "../@mui/AddEmployeeDetailDialog";
-import EditEmployeeDetailDialog from "../@mui/EditEmployeeDetailDialog";
+import AddEmployeeDetailDialog from "./employee/AddEmployeeDetailDialog";
+import EditEmployeeDetailDialog from "./employee/EditEmployeeDialog";
 
 export default function PerformanceTable() {
   return (

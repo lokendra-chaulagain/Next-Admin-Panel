@@ -4,7 +4,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
 import productRoute from "./routes/product.js";
-import employeeDetailRoute from "./routes/employeeDetail.route.js";
+import employeeRoute from "./routes/employee.route.js";
 import attendanceRoute from "./routes/attendance.route.js";
 import cors from "cors";
 const port = process.env.PORT;
@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/product", productRoute);
-app.use("/api/employeeDetail", employeeDetailRoute);
+app.use("/api/employee", employeeRoute);
 app.use("/api/attendance", attendanceRoute);
 
 //portListening

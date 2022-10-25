@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Dialog, Button } from "@mui/material";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { addNewEmployee } from "../../../redux/employee/employeeActions";
 
-export default function AddEmployeeDetailDialog() {
+export default function AddEmployeeDialog() {
   //Dialog controller
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
@@ -11,7 +13,9 @@ export default function AddEmployeeDetailDialog() {
     setOpen(false);
   };
 
-  const [employeesDetailValues, setEmployeesDetailValues] = useState({
+  const dispatch = useAppDispatch();
+  const { employee } = useAppSelector((state: any) => state.employeeStore);
+  const [employeeValues, setEmployeeValues] = useState({
     fullName: "",
     profilePicture: "",
     joinDate: "",
@@ -21,17 +25,25 @@ export default function AddEmployeeDetailDialog() {
   });
 
   const handleInputChange = (e: any) => {
-    setEmployeesDetailValues({
-      ...employeesDetailValues,
+    setEmployeeValues({
+      ...employeeValues,
       [e.target.name]: e.target.value,
     });
   };
-  console.log(employeesDetailValues);
 
   const handleFormSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form has been submitted");
+    dispatch(addNewEmployee(employeeValues));
   };
+
+  useEffect(() => {
+    addNewEmployee({});
+  }, []);
+
+  // const handleChange = (e: any) => {
+  //   setMember((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  // };
 
   return (
     <>
@@ -52,14 +64,14 @@ export default function AddEmployeeDetailDialog() {
               <label htmlFor="fullName" className="form-label mb-1">
                 Full Name
               </label>
-              <input name="fullName" value={employeesDetailValues.fullName} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="fullName" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="fullName" value={employeeValues.fullName} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="fullName" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
               <label htmlFor="profilePicture" className="form-label mb-1">
                 Profile Picture
               </label>
 
-              <input name="profilePicture" value={employeesDetailValues.profilePicture} onChange={handleInputChange} type="file" className="form-control form-control-lg mb-2  border-0  rounded-0" id="profilePicture" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="profilePicture" value={employeeValues.profilePicture} onChange={handleInputChange} type="file" className="form-control form-control-lg mb-2  border-0  rounded-0" id="profilePicture" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
@@ -68,13 +80,13 @@ export default function AddEmployeeDetailDialog() {
               <label htmlFor="joinDate" className="form-label mb-1">
                 Join Date
               </label>
-              <input name="joinDate" value={employeesDetailValues.joinDate} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="joinDate" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="joinDate" value={employeeValues.joinDate} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="joinDate" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
               <label htmlFor="position" className="form-label mb-1">
                 Position
               </label>
-              <input name="position" value={employeesDetailValues.position} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="position" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="position" value={employeeValues.position} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="position" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 
@@ -83,13 +95,13 @@ export default function AddEmployeeDetailDialog() {
               <label htmlFor="contact" className="form-label mb-1">
                 Contact Number
               </label>
-              <input name="contactNumber" value={employeesDetailValues.contactNumber} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="contact" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="contactNumber" value={employeeValues.contactNumber} onChange={handleInputChange} type="text" className="form-control form-control-lg mb-2  border-0  rounded-0" id="contact" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
             <div className="col">
               <label htmlFor="email" className="form-label mb-1">
                 Email Address
               </label>
-              <input name="email" value={employeesDetailValues.email} onChange={handleInputChange} type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="email" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
+              <input name="email" value={employeeValues.email} onChange={handleInputChange} type="email" className="form-control form-control-lg mb-2  border-0  rounded-0" id="email" aria-describedby="emailHelp" style={{ backgroundColor: "#2d3741", color: "#bbc4cc" }} />
             </div>
           </div>
 

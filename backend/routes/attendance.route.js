@@ -1,14 +1,8 @@
 import { Router } from "express";
-import {
-  addAttendanceStatus,
-  getAllEmployeeAttendance,
-} from "../controllers/attendance.controller.js";
 const router = Router();
+import { takeEntryAttendance, takeExitAttendance } from "../controllers/attendance.controller.js";
 
-//add
-router.post("/takeAttendance", addAttendanceStatus);
-
-//get
-router.get("/getAttendance", getAllEmployeeAttendance);
+router.post("/takeAttendance", takeEntryAttendance);
+router.put("/update/:id", takeExitAttendance);
 
 export default router;

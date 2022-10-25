@@ -4,10 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Box, Grid, Typography } from "@mui/material";
 import LeftAppBar from "../components/LeftBar";
 import Topbar from "../components/Topbar";
-import { Provider } from "react-redux";
-import { store } from "../../redux/store";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { Provider } from "react-redux";
+import { store } from "../../redux/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
