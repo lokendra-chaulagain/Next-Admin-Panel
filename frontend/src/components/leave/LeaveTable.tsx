@@ -1,18 +1,15 @@
 import * as React from "react";
 import { IconButton } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-
 import Link from "next/link";
-import DeleteAlert from "../components/DeleteAlert";
-import AddEmployeeDetailDialog from "./employee/AddEmployeeDetailDialog";
-import EditEmployeeDetailDialog from "./employee/EditEmployeeDialog";
+import DeleteAlert from "../DeleteAlert";
+import AskLeaveDialog from "./AskLeaveDialog";
+import EditLeaveDialog from "./EditLeaveDialog";
 
 export default function LeaveTable() {
   return (
     <>
-      <AddEmployeeDetailDialog />
-
+      <AskLeaveDialog />
       <div className="customCard mt-2 ">
         <table className="table  ">
           <thead>
@@ -39,7 +36,7 @@ export default function LeaveTable() {
                       <VisibilityIcon fontSize="inherit" color="warning" />
                     </IconButton>
                   </Link>
-                  <EditEmployeeDetailDialog />
+                  <EditLeaveDialog />
                   <DeleteAlert />
                 </div>
               </td>
@@ -58,7 +55,7 @@ export default function LeaveTable() {
                       <VisibilityIcon fontSize="inherit" color="warning" />
                     </IconButton>
                   </Link>
-                  <EditEmployeeDetailDialog />
+                  <EditLeaveDialog />
                   <DeleteAlert />
                 </div>
               </td>
@@ -78,7 +75,7 @@ export default function LeaveTable() {
                     </IconButton>
                   </Link>
 
-                  <EditEmployeeDetailDialog />
+                  <EditLeaveDialog />
 
                   <DeleteAlert />
                 </div>

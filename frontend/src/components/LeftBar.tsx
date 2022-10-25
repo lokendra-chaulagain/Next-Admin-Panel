@@ -37,8 +37,8 @@ const navItems = [
 
   {
     icon: <SettingsOutlinedIcon />,
-    label: "Leaves",
-    route: "/leaves",
+    label: "Leave",
+    route: "/leave",
   },
 
   {
