@@ -1,13 +1,13 @@
 import React from "react";
-import AttendancePunchCard from "../../@mui/AttendancePunchCard";
-import AttendanceTable from "../../components/AttendanceTable";
+import AttendancePunchCard from "../../components/attendance/AttendancePunchCard";
+import AttendanceTable from "../../components/attendance/AttendanceTable";
 
 function Attendance() {
   return (
-    <div>
+    <>
       <AttendanceTable />
       <AttendancePunchCard />
-    </div>
+    </>
   );
 }
 

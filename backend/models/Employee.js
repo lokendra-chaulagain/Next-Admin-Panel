@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const employeeDetailSchema = new mongoose.Schema({
+const EmployeeSchema = new mongoose.Schema({
   fullName: {
     type: String,
     required: "true",
@@ -30,8 +30,6 @@ const employeeDetailSchema = new mongoose.Schema({
     type: String,
     required: "true",
   },
-
-  
 });
 
-export default mongoose.model("EmployeeDetail", employeeDetailSchema);
+export default mongoose.model("Employee", EmployeeSchema);
