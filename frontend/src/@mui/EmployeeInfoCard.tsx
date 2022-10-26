@@ -3,7 +3,7 @@ import { Avatar, Typography } from "@mui/material";
 import img from "../../public/6.jpg";
 import Image from "next/image";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
-import SinglePersonEmailSendModal from "../components/SinglePersonEmailSendModal";
+import SinglePersonEmailSendModal from "../components/email/SinglePersonEmailSendModal";
 import EditEmployeeInformationDialog from "./EditEmployeeInformationDialog";
 
 const EmployeeInfoCard = () => {

@@ -3,9 +3,9 @@ import RegisterBox from "../components/RegisterBox";
 
 function Register() {
   return (
-    <Grid container justifyContent="center">
+    <div className="login_register_page">
       <RegisterBox />
-    </Grid>
+    </div>
   );
 }
 
