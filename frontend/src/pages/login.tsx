@@ -1,12 +1,11 @@
-import { Grid } from '@mui/material'
-import LoginBox from '../components/LoginBox'
+import LoginBox from "../components/LoginBox";
 
 function Login() {
   return (
-    <Grid container justifyContent="center">
+    <div className="login_register_page">
       <LoginBox />
-    </Grid>
-  )
+    </div>
+  );
 }
 
-export default Login
+export default Login;

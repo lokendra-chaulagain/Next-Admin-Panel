@@ -2,7 +2,6 @@ import React from "react";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { fetchAllEmployee } from "../../../redux/employee/employeeActions";
 import EmployeeTable from "../../components/employee/EmployeeTable";
-import { Grid } from "@mui/material";
 import EmployeeProfileCard from "../../components/employee/EmployeeProfileCard";
 
 function Employee() {
@@ -14,16 +13,12 @@ function Employee() {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <EmployeeTable employee={employee} />
-      <Grid className="mt-5 pt-5 d-flex flex-wrap justify-content-between">
-        <EmployeeProfileCard />
-        <EmployeeProfileCard />
-        <EmployeeProfileCard />
-        <EmployeeProfileCard />
-        <EmployeeProfileCard />
-      </Grid>
-    </div>
+      <div className="mt-5 pt-5 d-flex flex-wrap gap-3">
+        <EmployeeProfileCard employee={employee} />
+      </div>
+    </>
   );
 }
 

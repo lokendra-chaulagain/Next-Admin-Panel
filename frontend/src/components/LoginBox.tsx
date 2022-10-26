@@ -19,7 +19,7 @@ export default function LoginBox() {
 
         <Box mt={3}>
           <Typography className="customLabel">Email Address</Typography>
-          <TextField fullWidth id="fullWidth" className="customInput" type="email" autoComplete="off" />
+          <TextField fullWidth id="fullWidth" className="" type="email" autoComplete="off" />
         </Box>
 
         <Box mt={3}>
@@ -27,7 +27,7 @@ export default function LoginBox() {
             <Typography className="customLabel">Password</Typography>
             <Typography className="txtMuted cp">Forgot Password</Typography>
           </Grid>
-          <TextField fullWidth id="fullWidth" className="customInput" type="password" autoComplete="current-password" />
+          <TextField fullWidth id="fullWidth" className="input_field rounded-0 border-0" type="password" autoComplete="current-password" />
         </Box>
 
         <Box mt={3}>

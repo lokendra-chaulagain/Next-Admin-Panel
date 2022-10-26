@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { Card, CardContent, Typography } from '@mui/material'
-import AttendanceProgressBar from './AttendanceProgressBar'
+import AttendanceProgressBar from '../../@mui/AttendanceProgressBar'
 
-export default function OfficeEntryPerformanceCard() {
+export default function OfficeExitPerformanceCard() {
   return (
-    <Card variant="outlined" className="customCard ">
+    <Card variant="outlined" className="customCard">
       <CardContent>
         <Typography variant="h5" component="div" className="phc">
-          Office Entry Performance
+          Office Exit Performance
         </Typography>
         <AttendanceProgressBar />
       </CardContent>
